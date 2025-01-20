@@ -1,0 +1,616 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Urban Watches | Home </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="js/javascript.js"></script>
+        
+    </head>
+<!--Making Header Transparent-->
+    <style>
+     header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 16px 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 32px;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #f4a261;
+}
+
+.nav-links li a:hover {
+    color: #f4a261;
+}
+
+    </style> 
+    <body>
+        <header>
+            <div class="container">
+                <h1 class="logo"><img src="/images//urban soles. (6).png" alt=""></h1>
+                <nav>
+                     <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>    
+                </nav>
+            </div>
+        </header>
+    
+        <!-- Video Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <video autoplay loop muted playsinline class="promo-video">
+                    <source src="images/y2mate.com - OOZOO WATCH COMMERCIAL  PRODUCT VIDEOGRAPHY_1080.mp4"video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+               
+            </div>
+            <!--Using of Inline CSS to style ShopNow Button.-->
+        </section>
+        <section id="buynow" style="display: flex; justify-content: center; align-items: center; padding: 2rem 0; background-color: white; color: #fff;">
+            <a href="products.html" style="background: #f4a261; color: #fff; padding: 1rem 2rem; font-size: 1.2rem; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; display: inline-block;" 
+               onmouseover="this.style.background='#e76f51'; this.style.transform='scale(1.05)';" 
+               onmouseout="this.style.background='#f4a261'; this.style.transform='scale(1)';">
+                Shop Now
+            </a>
+        </section>
+        
+
+        <!-- Featured Products Section -->
+    <section id="products" class="products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/617PuITXFNL._SS1000_.jpg" alt="Luxury Watch">
+                <h3>Fossil Men Stainless Steel Nate Chronograph Black Dial Watch-Jr1401I</h3>
+                <p>Rs.25,500<span class="discount">Rs.50,000</span></p>
+                <button>BUY NOW</button>
+            </div>
+            <div class="product">
+                <img src="images/c12dc942-9c96-4a4f-9c2f-6ddfce1d82b11622187540841-1.jpg" alt="Casual Watch">
+                <h3>Tissot Men Black Analogue Watch - T1256173305100</h3>
+                <p>Rs.30,599 <span class="discount">Rs.42,000</span></p>
+                <button>BUY NOW</button>
+            </div>
+            <div class="product">
+                <img src="images/517AIIesGqL._SS400_.jpg" alt="Casual Watch">
+                <h3>Titan Regalia Maritime Anthracite NS1873KM01</h3>
+                <p>Rs.35,599 <span class="discount">Rs.40,000</span></p>
+                <button>BUY NOW</button>    
+            </div>
+            <div class="product">
+                <img src="images/71-xPhJRhHL._SS400_.jpg" alt="Casual Watch">
+                <h3>TIMEX Men Multifunction Black Round Dial Watch - TWEG18902</h3>
+                <p>Rs.15,599 <span class="discount">Rs.30,000</span></p>
+                <button>BUY NOW</button>
+            </div>
+            <div class="product">
+                <img src="images/81ejTVT9HbL._SS400_.jpg" alt="Casual Watch">
+                <h3>Casio G-Shock Digital Black Dial Men's Watch - G760</h3>
+                <p>Rs.15,599 <span class="discount">Rs.30,000</span></p>
+                <button>BUY NOW</button>
+            </div>
+            <div class="product">
+                <img src="images/71RglOBXeBL._SS400_.jpg" alt="Casual Watch">
+                <h3>Casio G-Shock Digital Military Edition.</h3>
+                <p>Rs.15,599 <span class="discount">Rs.30,000</span></p>
+                <button>BUY NOW</button>
+            </div>
+        <!-- Home Page Blog Section --------------------------------------------------------------------------------------------------------------------------->
+        <section id="blog-section" class="blog-section">
+          <div class="containes"> 
+
+            <h2 class="section-title">Latest Blog Posts</h2>
+            <p class="section-description">Discover watch fashion tips, product reviews, and much more in our blog.</p>
+        
+            <!-- Blog Cards-------------------------------------------------------------------------------------------------- -->
+            <div class="blog-card-main-container" style="display: flex; flex-direction: column; width: 100%;">
+              <div class="blog-grid">
+                <!-- Blog Card 1 -->
+                <div class="blog-card">
+                  <div class="blog-image-wrapper">
+                    <img src="images/images (2).jpeg" alt="Blog Post 1" class="blog-image">
+                  </div>
+                  <h3 class="blog-title">Exploring The Impact of Technology on the Watch Industry: Traditional Meets Digital</h3>
+                  <p class="blog-description">
+                    Exploring how technological advancements are transforming watchmaking and design in unprecedented ways. From smart integration to traditional craftsmanship, we delve deep into how modern technology is reshaping the future of horology
+                  </p>
+                  <div class="blog-action">
+                    <a href="first.html" class="read-more">Read More</a>
+                  </div>
+                </div>
+          
+                <!-- Blog Card 2 -->
+                <div class="blog-card">
+                  <div class="blog-image-wrapper">
+                    <img src="images/images3.jpeg" alt="Blog Post 2" class="blog-image">
+                  </div>
+                  <h3 class="blog-title">The Evolution of Luxury Timepieces: A Journey Through Time</h3>
+                  <p class="blog-description">
+                    Discover the fascinating journey of luxury watchmaking, from its humble beginnings to the sophisticated masterpieces of today. We explore the milestones that shaped the industry.
+                  </p>
+                  <div class="blog-action">
+                    <a href="second.html" class="read-more">Read More</a>
+                  </div>
+                </div>
+          
+                <!-- Blog Card 3 -->
+                <div class="blog-card">
+                  <div class="blog-image-wrapper">
+                    <img src="images/Rado-DiaStar-Original-Skeleton-R12162153-LS.jpg" alt="Blog Post 3" class="blog-image">
+                  </div>
+                  <h3 class="blog-title">Technological advancements with watch design and sales</h3>
+                  <p class="blog-description">
+                    Discover how connected watches have evolved from simple notification tools to advanced AI-powered devices with health monitoring and predictive capabilities.
+                  </p>
+                  <div class="blog-action">
+                    <a href="third.html" class="read-more">Read More</a>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+  
+  <!-- Additional CSS for Styling Blog Page -->
+  <style>
+/* Section Containers */
+.blog-section {
+  padding: 40px 0;
+  background-color: #f8f9fa;
+  width: 100%;
+
+}
+
+.containes {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* Section Headers */
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.section-description {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Blog Grid Layout */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+  padding: 0 15px; /* Added padding for better spacing on smaller screens */
+}
+
+/* Blog Card Styling */
+.blog-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures vertical alignment */
+  align-items: flex-start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  cursor: pointer;
+  will-change: transform; /* Improve hover transition */
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Blog Images */
+.blog-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: block;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  
+}
+
+/* Blog Content */
+.blog-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  min-height: 50px;
+}
+
+.blog-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 65px;
+  flex-grow: 1;
+}
+
+/* Action Buttons */
+.read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: auto;
+}
+
+.read-more:hover {
+  background-color: #444;
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #333;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #444;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-card {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .blog-card {
+    padding: 12px;
+    min-height: 360px;
+  }
+
+  .blog-image {
+    height: 200px;
+  }
+
+  .blog-title {
+    font-size: 16px;
+    min-height: auto;
+  }
+
+  .blog-description {
+    font-size: 13px;
+    margin-bottom: 15px;
+    max-height: 60px;
+  }
+
+  .read-more {
+    padding: 8px 16px;
+  }
+}
+
+/* Additional Enhancements */
+.blog-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #333, #666);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.blog-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* Optimize Images Loading */
+.blog-image {
+  display: block;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  
+}
+
+
+  </style>          
+        </div>
+    </section>
+    
+
+<!--Styling of Footer-->
+    <style>
+      body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+      }
+
+      .features {
+          display: flex;
+          text-align: center;
+      }
+
+      .feature {
+          flex: 1;
+          padding: 50px 20px;
+          color: #fff;
+      }
+
+      .feature.yellow {
+          background-color: #FFD700;
+      }
+
+      .feature.orange {
+          background-color: #FF9800;
+      }
+
+      .feature.dark-blue {
+          background-color: #0D1127;
+      }
+
+      .footer {
+    background-color: #1C1C1C;
+    color: #ccc;
+    padding: 20px 15px; /* Reduced padding */
+}
+
+.footer .columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px; /* Reduced padding */
+    min-width: 150px; /* Optional adjustment for smaller columns */
+}
+
+.footer-column h3 {
+    color: #FFD700;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.footer-column a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.footer .contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    margin-bottom: 8px; /* Reduced margin */
+    padding: 8px; /* Reduced padding */
+    border: none;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 8px; /* Reduced padding */
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #FFC107;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px; /* Reduced margin */
+    color: #fff;
+    font-size: 14px; /* Optional smaller font size */
+}
+
+.social-icons {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Align icons vertically */
+    margin-top: 10px; /* Adjust margin as needed */
+    gap: 10px; /* Add equal spacing between icons */
+}
+
+.social-icons a {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 40px; /* Set a fixed width for uniform size */
+    height: 40px; /* Set a fixed height for uniform size */
+    background-color: transparent; /* Optional: Add a background for visual effect */
+    border-radius: 50%; 
+    color: #ccc; 
+    font-size: 20px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.social-icons a:hover {
+    background-color: #FFD700; 
+    color: #000; 
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Features Section -->
+  <div class="features">
+      <div class="feature yellow">
+          <h2>BEST QUALITY</h2>
+          <p>We only sell genuine products for the safety and assurance of our customers.</p>
+      </div>
+      <div class="feature dark-blue">
+          <h2>OUR CUSTOMERS</h2>
+          <p>5000+ CUSTOMERS</p>
+      </div>
+      <div class="feature orange">
+          <h2>SHIPPING</h2>
+          <p>ALL OVER NEPAL</p>
+      </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+      <div class="columns">
+          <div class="footer-column">
+              <h3>Urban Watches</h3>
+              <p>Your Time , Your Style and Your Watch.</p>
+              <p><b>Location:</b>  Kamalpokhari,Kathmandu,Bagmati Nepal</p>
+              <p><b>Email:</b><a href="mailto:yoururbanwatches@gmail.com"> yoururbanwatches@gmail.com</a></p>
+              <p><b>Phone:</b> 9806066848 || 9867063203</p>
+              
+              
+              <div class="social-icons">
+                  <a href="https://www.facebook.com" target="_blank">
+                    <img src="images/Untitled design.png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+                </a>
+                
+                <a href="https://www.instagram.com" target="_blank">
+                  <img src="images/Untitled design (1).png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+              </a>
+              </div>
+              
+            
+
+          </div>
+         
+          <div class="footer-column">
+              <h3>Quick Links</h3>
+              <a href="base.html">Home</a>
+              <a href="products.html">Shop</a>
+              <a href="cv.html">About Us</a>
+              <a href="contactus.html">Contact Us</a>
+          </div>
+          <div class="footer-column">
+              <h3>Company</h3>
+              <a href="#products">SALE!</a>
+              <a href="products.html">Browse Watches</a>
+              <a href="blog.html">Browse Blogs</a>
+              <a href="products.html">Browse Brands</a>
+          </div>
+         
+      </div>
+      
+      <div class="footer-bottom">
+          Urban Watches | All Rights Reserved 2025
+      </div>
+  </footer>
+      
+        
+    </body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Hey teacher! This is my blog website for Urban Watches. I've added comments to explain what each part does -->
+
+<head>
+    <!-- These tags help with character encoding and mobile responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Watches Blog</title>
+    <style>
+        /* CSS BASICS SECTION */
+        
+        /* This resets all spacing to zero and makes sizing easier */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* This sets up the main font and colors for the whole website */
+        body {
+            font-family: Arial, sans-serif; /* Using a simple, clean font */
+            background-color: #F2F2F2; /* Light grey background */
+            color: #2C2C2C; /* Dark grey text */
+            font-size: 16px; /* Base text size */
+        }
+
+        /* HEADER AND NAVIGATION SECTION */
+        
+        /* This makes our navigation bar stick to the top and look fancy with blur */
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            padding: 16px 0;
+            width: 100%;
+            position: fixed; /* Sticks to top of screen */
+            z-index: 1000; /* Makes sure it stays on top of other content */
+            backdrop-filter: blur(5px); /* Cool blur effect */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+        }
+
+        /* This centers our header content and sets its size */
+        .header-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 60px;
+        }
+
+        /* This positions our logo on the left side */
+        .logo {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%); /* Centers logo vertically */
+            margin: 0;
+            z-index: 1001;
+        }
+
+        /* This styles our logo image */
+        .logo img {
+            height: 150px;
+            width: auto;
+            margin-right: 32px;
+            position: relative;
+            top: 30px; /* Moves logo down a bit */
+        }
+
+        /* This makes our navigation links line up horizontally */
+        .nav-links {
+            display: flex;
+            gap: 32px; /* Space between links */
+            list-style: none;
+        }
+
+        /* This styles each navigation link */
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s; /* Smooth color change on hover */
+        }
+
+        /* This makes links change color when you hover over them */
+        .nav-links li a:hover {
+            color: #f4a261; /* Orange-ish color */
+        }
+
+        /* HERO SECTION (Big Title Area) */
+        
+        /* This creates our main banner area with background image */
+        .hero {
+            position: relative;
+            height: 100%;
+            min-height: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Dark overlay */
+                        url('images/18.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: 40px;
+            padding-top: 80px;
+        }
+
+        /* This styles our main title text to make it big and glowy */
+        .hero h1 {
+            font-size: 120px;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                         0 0 20px rgba(255, 255, 255, 0.6),
+                         0 0 30px rgba(255, 255, 255, 0.4);
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            animation: glow 2s infinite alternate; /* Makes the text glow */
+        }
+        /* This styles our subtitle */
+        .hero p {
+            font-size: 24px;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Subtle glow effect */
+        }
+
+        /* This creates the glowing animation for our title */
+        @keyframes glow {
+            from {
+                /* Starting glow effect */
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                             0 0 20px rgba(255, 255, 255, 0.6),
+                             0 0 30px rgba(255, 255, 255, 0.4);
+            }
+            to {
+                /* Ending glow effect - it alternates between these two states */
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                             0 0 30px rgba(255, 255, 255, 0.6),
+                             0 0 40px rgba(255, 255, 255, 0.4),
+                             0 0 50px rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        /* BLOG POSTS SECTION */
+        
+        /* This is the main container that holds all our blog posts */
+        .blog-container {
+            position: relative;
+            z-index: 2; /* Makes sure it's above the hero section */
+            background-color: #F2F2F2;
+            padding-top: 60px;
+            width: 80%; /* Makes it narrower than full width */
+            margin: 0 auto; /* Centers it on the page */
+        }
+
+        /* This styles each individual blog post card */
+        .blog-card {
+            display: flex; /* Makes image and text sit side by side */
+            background-color: #FFFFFF;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Nice shadow effect */
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        /* This styles the image part of each blog post */
+        .blog-image {
+            width: 40%; /* Takes up 40% of the card width */
+            padding: 20px;
+        }
+
+        /* This makes all our blog images look consistent */
+        .blog-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover; /* Makes images fill their space nicely */
+            border-radius: 5px;
+        }
+
+        /* This styles the text part of each blog post */
+        .blog-content {
+            width: 60%; /* Takes up 60% of the card width */
+            padding: 30px;
+        }
+
+        /* This styles the titles in our blog posts */
+        .blog-content h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* This styles the paragraphs in our blog posts */
+        .blog-content p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            line-height: 150%; /* Makes text more readable */
+        }
+
+        /* This styles our "read more" links */
+        .read-more {
+            text-decoration: none;
+            color: #007BFF; /* Nice blue color */
+            font-weight: bold;
+        }
+
+        /* FOOTER SECTION */
+        
+        /* This styles our main footer area */
+        .footer {
+            background-color: #1a1a1a; /* Dark background */
+            color: #fff;
+            padding: 40px 20px 20px;
+        }
+
+        /* This organizes our footer content into columns */
+        .footer .columns {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Allows columns to stack on small screens */
+            gap: 40px;
+        }
+
+        /* This styles each footer column */
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        /* This styles the headings in our footer */
+        .footer-column h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* This styles all the text and links in our footer */
+        .footer-column p, 
+        .footer-column a {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* This arranges our social media icons */
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* This sets the size of our social media icons */
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* This styles the copyright section at the bottom */
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333; /* Adds a line above copyright */
+        }
+
+        /* MOBILE RESPONSIVE SECTION */
+        /* These rules change how things look on smaller screens */
+        
+        /* For tablet-sized screens and smaller */
+        @media screen and (max-width: 768px) {
+            /* Makes the hero title smaller */
+            .hero h1 {
+                font-size: 72px;
+            }
+            
+            /* Makes the hero subtitle smaller */
+            .hero p {
+                font-size: 18px;
+            }
+            
+            /* Adjusts hero section height */
+            .hero {
+                height: 70%;
+            }
+
+            /* Makes blog cards stack vertically instead of side-by-side */
+            .blog-card {
+                flex-direction: column;
+            }
+
+            /* Makes blog images and content take full width */
+            .blog-image,
+            .blog-content {
+                width: 100%;
+            }
+
+            /* Makes blog container wider on mobile */
+            .blog-container {
+                width: 95%;
+            }
+
+            /* Makes footer columns stack */
+            .footer-column {
+                flex: 100%;
+                text-align: center;
+            }
+
+            /* Centers social icons */
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+        /* For phone-sized screens */
+        @media screen and (max-width: 480px) {
+            /* Makes the hero title even smaller */
+            .hero h1 {
+                font-size: 48px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <!-- This is our navigation bar that stays at the top of the page -->
+    <header>
+        <div class="header-container">
+            <!-- Our logo -->
+            <h1 class="logo"><img src="images/urban soles. (6).png" alt="Urban Watches Logo"></h1>
+            <!-- Navigation menu -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="base.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="research.html">Research</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <!-- This is our main banner with the big title -->
+    <section class="hero">
+        <h1>BLOG</h1>
+        <p>Where Time Meets Sophistication ⌚</p>
+    </section>
+
+    <!-- BLOG POSTS SECTION -->
+    <!-- This is where all our blog posts are displayed -->
+    <section class="blog-container">
+        <!-- First blog post about watch technology -->
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="images/12.jpg" alt="Limited Edition Chronograph Collection">
+            </div>
+            <div class="blog-content">
+                <h2>Exploring The Impact of Technology on the Watch Industry: Traditional Meets Digital</h2>
+                <p>Exploring how technological advancements are transforming watchmaking and design in unprecedented ways. From smart integration to traditional craftsmanship, we delve deep into how modern technology is reshaping the future of horology.</p>
+                <p>The watch industry stands at a fascinating crossroad where centuries-old traditions meet cutting-edge innovation. This convergence has sparked a revolution in how timepieces are created, marketed, and enjoyed by enthusiasts worldwide.</p>
+                <a href="first.html" class="read-more">READ MORE..</a>
+            </div>
+        </div>
+
+        <!-- Second blog post about luxury watches -->
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="images/14.jpg" alt="Luxury Watch Trends">
+            </div>
+            <div class="blog-content">
+                <h2>The Evolution of Luxury Timepieces: A Journey Through Time</h2>
+                <p>Discover the fascinating journey of luxury watchmaking, from its humble beginnings to the sophisticated masterpieces of today. We explore the milestones that shaped the industry.</p>
+                <p>From mechanical innovations to design breakthroughs, this comprehensive look at horological history reveals the artistry and engineering that define luxury timepieces.</p>
+                <a href="second.html" class="read-more">READ MORE..</a>
+            </div>
+        </div>
+
+        <!-- Third blog post about smart watches -->
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="/images/Rado-DiaStar-Original-Skeleton-R12162153-LS.jpg" alt="Watch Care Guide">
+            </div>
+            <div class="blog-content">
+                <h2>Technological advancements with watch design and sales</h2>
+                <p>Discover how connected watches have evolved from simple notification tools to advanced AI-powered devices with health monitoring and predictive capabilities.</p>
+                <p>With a market value of $22 billion and a 14.5% annual growth rate, these innovations in technology and design are revolutionizing the way we interact with wearable tech, paving the way for enhanced connectivity, smarter features, and futuristic developments.</p>
+                <a href="third.html" class="read-more">READ MORE..</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <!-- This is where we put all our contact info and extra links -->
+    <footer class="footer">
+        <div class="columns">
+            <div class="footer-column">
+                <h3>Urban Watches</h3>
+                <p>Your Time , Your Style and Your Watch.</p>
+                <p><b>Location:</b>  Kamalpokhari,Kathmandu,Bagmati Nepal</p>
+                <p><b>Email:</b><a href="mailto:yoururbanwatches@gmail.com"> yoururbanwatches@gmail.com</a></p>
+                <p><b>Phone:</b> 9806066848 || 9867063203</p>
+                
+                
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank">
+                      <img src="images/Untitled design.png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+                  </a>
+                  
+                  <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/Untitled design (1).png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+                </a>
+                </div>
+                
+              
+  
+            </div>
+           
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="base.html">Home</a>
+                <a href="products.html">Shop</a>
+                <a href="cv.html">About Us</a>
+                <a href="contactus.html">Contact Us</a>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <a href="#products">SALE!</a>
+                <a href="products.html">Browse Watches</a>
+                <a href="blog.html">Browse Blogs</a>
+                <a href="products.html">Browse Brands</a>
+            </div>
+           
+        </div>
+        
+        <div class="footer-bottom">
+            Urban Watches | All Rights Reserved 2025
+        </div>
+    </footer>
+</body>
+</html>
