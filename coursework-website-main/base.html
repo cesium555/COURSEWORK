@@ -10,66 +10,13 @@
         <script src="js/javascript.js"></script>
         
     </head>
-<!--Making Header Transparent-->
-    <style>
-     header {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 16px 0;
-    width: 100%;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo img {
-    height: 100px;
-    margin-right: 32px;
-}
-
-nav {
-    flex-grow: 1;
-}
-
-.nav-links {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #f4a261;
-}
-
-.nav-links li a:hover {
-    color: #f4a261;
-}
-
-    </style> 
     <body>
         <header>
             <div class="container">
                 <h1 class="logo"><img src="/images//urban soles. (6).png" alt=""></h1>
                 <nav>
                      <ul class="nav-links">
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="base.html">Home</a></li>
                         <li><a href="products.html">Products</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="aboutus.html">About Us</a></li>
@@ -78,6 +25,62 @@ nav {
                 </nav>
             </div>
         </header>
+        <style>
+          /* ===============================
+   Hero Section
+================================ */
+    .hero {
+       background: url('../images/banner.jpg') no-repeat center center/cover;
+       height: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: var(--white);
+       text-align: center;
+      }
+
+      .hero-content h2 {
+       font-size: 48px;
+       margin-bottom: var(--spacing);
+      }
+
+      .hero-content p {
+       font-size: 19px;
+       margin-bottom: calc(var(--spacing) * 2);
+      }
+
+      .cta-btn {
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 13px 24px;
+        text-decoration: none;
+        border-radius: var(--border-radius);
+        transition: background var(--transition);
+      }
+
+.cta-btn:hover {
+    background: var(--secondary-color);
+}
+/* Video Section Styling */
+.video-section {
+    text-align: center;
+    padding: 32px 0;
+    background-color: #f9f9f9;
+}
+
+.video-section h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.promo-video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+        </style>
     
         <!-- Video Section -->
         <section id="home" class="hero">

@@ -58,6 +58,56 @@ body {
 /* ===============================
    Header Section
 ================================ */
+<!--Making Header Transparent-->
+     header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 16px 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 32px;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #f4a261;
+}
+
+.nav-links li a:hover {
+    color: #f4a261;
+}
 header {
     background: var(--black);
     color: var(--white);
@@ -65,14 +115,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .logo img {
