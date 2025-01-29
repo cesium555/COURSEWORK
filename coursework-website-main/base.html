@@ -184,6 +184,112 @@ nav {
       </div>
   </div>
 </section>
+<!---Styling of Product Page:-->
+<style>
+  /* ===============================
+   Products Section
+================================ */
+/* Product Card Improvements */
+
+/* Product Section Container */
+.products {
+    padding: 50px 20px;
+    text-align: center;
+    background: var(--white);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Product Grid Layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Shows 3 products per row */
+    gap: 30px;
+    padding: 20px;
+    justify-items: center;
+}
+.product {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover img {
+    transform: scale(1.05);
+}
+
+.product h3 {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #333;
+    height: 50px;
+    overflow: hidden;
+}
+
+.product p {
+    font-size: 20px;
+    color: #f4a261;
+    font-weight: bold;
+}
+
+.product .discount {
+    color: #999;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.product button {
+    width: 100%;
+    padding: 12px;
+    background: #f4a261;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product button:hover {
+    background: #e76f51;
+    transform: translateY(-2px);
+}
+
+/* Add sale badge */
+.product::before {
+    content: 'SALE';
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background: #e76f51;
+    color: white;
+    padding: 5px 30px;
+    transform: rotate(45deg);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+</style>
 
 <!-- Blog Section -->
 <section id="blog-section" class="blog-section">
