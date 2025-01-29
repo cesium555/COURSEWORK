@@ -134,7 +134,7 @@ nav {
             <!--Using of Inline CSS to style ShopNow Button.-->
         </section>
         <section id="buynow" style="display: flex; justify-content: center; align-items: center; padding: 2rem 0; background-color: white; color: #fff;">
-            <a href="#products" style="background: #f4a261; color: #fff; padding: 1rem 2rem; font-size: 1.2rem; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; display: inline-block;" 
+            <a href="#products" style="background: #0D1127; color: #fff; padding: 1rem 2rem; font-size: 1.2rem; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; display: inline-block;" 
                onmouseover="this.style.background='#e76f51'; this.style.transform='scale(1.05)';" 
                onmouseout="this.style.background='#f4a261'; this.style.transform='scale(1)';">
                 Shop Now
@@ -248,7 +248,7 @@ nav {
 
 .product p {
     font-size: 20px;
-    color: #f4a261;
+    color: #0D1127;
     font-weight: bold;
 }
 
@@ -261,7 +261,7 @@ nav {
 .product button {
     width: 100%;
     padding: 12px;
-    background: #f4a261;
+    background: #0D1127;
     color: white;
     border: none;
     border-radius: 8px;
@@ -271,7 +271,7 @@ nav {
 }
 
 .product button:hover {
-    background: #e76f51;
+    background: #2979FF;
     transform: translateY(-2px);
 }
 
@@ -470,7 +470,7 @@ nav {
 .read-more {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #0D1127;
   color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
@@ -495,7 +495,7 @@ nav {
 .cta-button {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #333;
+  background-color: #0D1127;
   color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
@@ -598,18 +598,24 @@ nav {
           text-align: center;
       }
 
-      .feature {
-          flex: 1;
-          padding: 50px 20px;
-          color: #fff;
-      }
+    .feature {
+    flex: 1;
+    padding: 50px 20px;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
 
       .feature.yellow {
-          background-color: #FFD700;
+          background-color: #0d1127;
       }
 
       .feature.orange {
-          background-color: #FF9800;
+          background-color: #0d1127;
       }
 
       .feature.dark-blue {
@@ -718,7 +724,7 @@ nav {
   <div class="features">
       <div class="feature yellow">
           <h2>BEST QUALITY</h2>
-          <p>We only sell genuine products for the safety and assurance of our customers.</p>
+          <p>We ensure customer safety with 100% genuine products..</p>
       </div>
       <div class="feature dark-blue">
           <h2>OUR CUSTOMERS</h2>
