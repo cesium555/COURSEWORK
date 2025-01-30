@@ -6,20 +6,20 @@
         <title>Urban Watches | Product </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-        <script src="js/javascript.js"></script>
+        <link rel="stylesheet" href="/css/styles.css">
+        <script src="/js/javascript"></script>
         
     </head>
 <!--Making Header Transparent-->
     <style>
-        header {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 16px 0;
-    width: 100%;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+         header {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 16px 0;
+        width: 100%;
+        z-index: 1000;
+        backdrop-filter: blur(5px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
 .container {
     display: flex;
@@ -209,35 +209,37 @@ input[type="checkbox"] {
     color: #333;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+      .footer {
+    background-color: #1C1C1C;
+    color: #ccc;
+    padding: 20px 15px; /* Reduced padding */
 }
-    </style> 
-        <header>
-                <div class="container">
-                    <h1 class="logo"><img src="/images/urban soles. (6).png" alt="logo"></h1>
-                    <nav>
-                        <ul class="nav-links">
-                            <li><a href="base.html">Home</a></li>
-                            <li><a href="products.html">Products</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="aboutus.html">About Us</a></li>
-                            <li><a href="research.html">Research</a></li>
-                        </ul>        
-                <div class="cart-icon" onclick="toggleCart()">
-                    <i class="shopping-cart"><img src="/images/shop-cart.png" style="size: 20px;"></i>
-                    <span class="cart-count">0</span>
-                </div>
-                </nav>
-            </div>
-        </header>
-     <style>
+
+
+      .social-icons {
+      display: flex;
+      gap: 20px; /* Space between icons */
+    }
+
+    .social-icons a {
+      text-decoration: none; /* Remove underline */
+    }
+
+    .social-icons img {
+      width: 50px; /* Adjust icon size */
+      height: 50px;
+      transition: transform 0.2s ease; /* Add hover effect */
+    }
       body {
           margin: 0;
           font-family: Arial, sans-serif;
       }
       .footer {
+    background-color: #1C1C1C;
+    color: #ccc;
+    padding: 20px 15px; /* Reduced padding */
+}
+.footer {
     background-color: #1C1C1C;
     color: #ccc;
     padding: 20px 15px; /* Reduced padding */
@@ -271,11 +273,6 @@ body {
     color: #fff;
 }
 
-.footer .contact {
-    display: flex;
-    flex-direction: column;
-}
-
 .footer-bottom {
     text-align: center;
     margin-top: 10px; /* Reduced margin */
@@ -297,8 +294,25 @@ body {
       height: 50px;
       transition: transform 0.2s ease; /* Add hover effect */
     }
-
-  </style>
+    </style> 
+        <header>
+                <div class="container">
+                    <h1 class="logo"><img src="/images/urban soles. (6).png" alt="logo"></h1>
+                    <nav>
+                        <ul class="nav-links">
+                            <li><a href="/base.html">Home</a></li>
+                            <li><a href="/html/products.html">Products</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="research.html">Research</a></li>
+                        </ul>        
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="shopping-cart"><img src="/images/shop-cart.png" style="size: 20px;"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                </nav>
+            </div>
+        </header>
   <section id="page-header">
     <p style ="color:gold"><b> <a href="base.html" style="text-decoration: none; color: gold;">Home</a> > Shop</b></p>
   </section>
@@ -443,172 +457,6 @@ body {
                 </div>
             </div>
     
-            <script>
-                // Store cart data in localStorage to persist across pages
-const cartManager = {
-    cartItems: [],
-    
-    // Initialize cart from localStorage
-    init() {
-        const savedCart = localStorage.getItem('urbanWatchesCart');
-        if (savedCart) {
-            this.cartItems = JSON.parse(savedCart);
-            this.updateCartUI();
-        }
-    },
-    
-    // Add item to cart
-    addItem(product) {
-        const existingItem = this.cartItems.find(item => item.id === product.id);
-        
-        if (existingItem) {
-            existingItem.quantity += product.quantity;
-        } else {
-            this.cartItems.push({
-                id: product.id,
-                name: product.name,
-                price: product.price,
-                quantity: product.quantity,
-                image: product.image
-            });
-        }
-        
-        this.saveCart();
-        this.updateCartUI();
-    },
-    
-    // Remove item from cart
-    removeItem(productId) {
-        const itemIndex = this.cartItems.findIndex(item => item.id === productId);
-        if (itemIndex > -1) {
-            this.cartItems.splice(itemIndex, 1);
-            this.saveCart();
-            this.updateCartUI();
-        }
-    },
-    
-    // Save cart to localStorage
-    saveCart() {
-        localStorage.setItem('urbanWatchesCart', JSON.stringify(this.cartItems));
-    },
-    
-    // Update cart UI elements
-    updateCartUI() {
-        // Update cart count
-        const cartCount = this.cartItems.reduce((total, item) => total + item.quantity, 0);
-        const cartCountElements = document.querySelectorAll('.cart-count');
-        cartCountElements.forEach(element => {
-            element.textContent = cartCount;
-        });
-        
-        // Update cart panel items
-        const cartItemsContainer = document.querySelector('.cart-items');
-        if (cartItemsContainer) {
-            cartItemsContainer.innerHTML = '';
-            
-            this.cartItems.forEach(item => {
-                const itemElement = document.createElement('div');
-                itemElement.className = 'cart-item';
-                itemElement.innerHTML = `
-                    <img src="${item.image || '/images/placeholder.jpg'}" alt="${item.name}">
-                    <div class="cart-item-details">
-                        <h4>${item.name}</h4>
-                        <p>Quantity: ${item.quantity}</p>
-                        <p>Rs. ${(item.price * item.quantity).toLocaleString()}</p>
-                    </div>
-                    <button onclick="cartManager.removeItem('${item.id}')" class="remove-item">×</button>
-                `;
-                cartItemsContainer.appendChild(itemElement);
-            });
-        }
-        
-        // Update subtotal
-        const subtotal = this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
-        const subtotalElements = document.querySelectorAll('.subtotal-amount');
-        subtotalElements.forEach(element => {
-            element.textContent = `Rs. ${subtotal.toLocaleString()}`;
-        });
-    }
-};
-
-// Product sorting functionality
-const productSorter = {
-    init() {
-        const sortSelect = document.getElementById('sort-select');
-        if (sortSelect) {
-            sortSelect.addEventListener('change', this.handleSort.bind(this));
-        }
-    },
-    
-    handleSort(event) {
-        const sortValue = event.target.value;
-        const productsContainer = document.querySelector('.productt');
-        const products = Array.from(productsContainer.getElementsByClassName('produc'));
-        
-        products.sort((a, b) => {
-            const priceA = this.extractPrice(a.querySelector('.produc-price').textContent);
-            const priceB = this.extractPrice(b.querySelector('.produc-price').textContent);
-            
-            return sortValue === 'price-high-to-low' ? priceB - priceA : priceA - priceB;
-        });
-        
-        // Clear and re-append sorted products
-        productsContainer.innerHTML = '';
-        products.forEach(product => productsContainer.appendChild(product));
-    },
-    
-    extractPrice(priceString) {
-        // Extract numeric price from string (e.g., "Rs. 12,115" -> 12115)
-        return parseInt(priceString.replace(/[^0-9]/g, ''));
-    }
-};
-
-// Initialize cart and sorting functionality
-document.addEventListener('DOMContentLoaded', () => {
-    cartManager.init();
-    productSorter.init();
-    
-    // Handle "Buy Now" button click on product detail page
-    const buyNowButton = document.querySelector('.add-to-cart');
-    if (buyNowButton) {
-        buyNowButton.addEventListener('click', () => {
-            const quantity = parseInt(document.getElementById('quantity').value);
-            if (quantity > 0) {
-                const product = {
-                    id: window.location.pathname, // Use URL as unique identifier
-                    name: document.querySelector('.product-title').textContent,
-                    price: parseFloat(document.querySelector('.product-price').textContent.replace(/[^0-9]/g, '')),
-                    quantity: quantity,
-                    image: document.querySelector('.product-image img').src
-                };
-                cartManager.addItem(product);
-                toggleCart();
-            }
-        });
-    }
-    
-    // Handle "Add to Cart" buttons on products page
-    const addToCartButtons = document.querySelectorAll('.cart-btn');
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const product = {
-                id: button.dataset.productId,
-                name: button.dataset.productName,
-                price: parseFloat(button.dataset.productPrice),
-                quantity: 1,
-                image: button.closest('.produc').querySelector('img').src
-            };
-            cartManager.addItem(product);
-        });
-    });
-});
-
-// Toggle cart panel visibility
-function toggleCart() {
-    const cartPanel = document.querySelector('.cart-panel');
-    cartPanel.classList.toggle('active');
-}
-            </script>
   <div class="productt">
     <div class="produc">
         <div class="produc-image">
@@ -618,7 +466,7 @@ function toggleCart() {
                     <img src="/images/c.png"style="width: 75%;"> 
                 </button>
                 <button type="button" class="search-btn">
-                   <a href="product1.html"><img src="/images/s.png" style="width: 75%;"></a>
+                   <a href="product-1.html"><img src="/images/s.png" style="width: 75%;"></a>
                 </button>
             </div>
         </div>
@@ -656,7 +504,7 @@ function toggleCart() {
         </div>
         <h3>G-SHOCK Military Watch</h3>
         <div class="produc-brand">G-SHOCK</div>
-        <div class="produc-price">Rs. 18,579></div>
+        <div class="produc-price">Rs. 18,579</div>
     </div>
     <div class="produc">
         <div class="produc-image">
@@ -765,7 +613,6 @@ function toggleCart() {
         <button id="next-button" class="pagination-button">&gt;</button>
     </div>
 </section>
-
 <style>
 .pagination-container {
     display: flex;
@@ -825,88 +672,6 @@ function toggleCart() {
     cursor: default;
 }
 </style>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const paginationNumbers = document.getElementById("pagination-numbers");
-    const prevButton = document.getElementById("prev-button");
-    const nextButton = document.getElementById("next-button");
-    
-    const totalPages = 20;
-    let currentPage = 1;
-
-    function createPaginationButtons() {
-        paginationNumbers.innerHTML = '';
-        
-        // Helper function to create button
-        function createButton(number) {
-            const button = document.createElement("button");
-            button.textContent = number;
-            button.addEventListener('click', () => updatePage(number));
-            if (currentPage === number) {
-                button.classList.add('active');
-            }
-            return button;
-        }
-
-        // Helper function to create dots
-        function createDots() {
-            const span = document.createElement("span");
-            span.textContent = "...";
-            span.classList.add("dots");
-            return span;
-        }
-
-        // Always show first page
-        paginationNumbers.appendChild(createButton(1));
-
-        if (currentPage > 3) {
-            paginationNumbers.appendChild(createDots());
-        }
-
-        // Show pages around current page
-        for (let i = Math.max(2, currentPage - 1); 
-             i <= Math.min(currentPage + 1, totalPages - 1); i++) {
-            if (i === 1 || i === totalPages) continue;
-            paginationNumbers.appendChild(createButton(i));
-        }
-
-        if (currentPage < totalPages - 2) {
-            paginationNumbers.appendChild(createDots());
-        }
-
-        // Always show last page
-        paginationNumbers.appendChild(createButton(totalPages));
-
-        // Update prev/next button states
-        prevButton.disabled = currentPage === 1;
-        nextButton.disabled = currentPage === totalPages;
-    }
-
-    function updatePage(pageNumber) {
-        currentPage = pageNumber;
-        createPaginationButtons();
-        // You can add your content update logic here
-        window.scrollTo(0, 0); // Scroll to top when page changes
-    }
-
-    // Add event listeners for prev/next buttons
-    prevButton.addEventListener('click', () => {
-        if (currentPage > 1) {
-            updatePage(currentPage - 1);
-        }
-    });
-
-    nextButton.addEventListener('click', () => {
-        if (currentPage < totalPages) {
-            updatePage(currentPage + 1);
-        }
-    });
-
-    // Initial setup
-    createPaginationButtons();
-});
-</script>
 <!-- Footer Section -->
 <footer class="footer">
     <div class="columns">
@@ -914,7 +679,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3>Urban Watches</h3>
             <p>Your Time , Your Style and Your Watch.</p>
             <p><b>Location:</b>  Kamalpokhari,Kathmandu,Bagmati Nepal</p>
-            <p><b>Email:</b><a href="mailto:yoururbanwatches@gmail.com"> yoururbanwatches@gmail.com</a></p>
+            <p><b>Email:</b> yoururbanwatches@gmail.com</p>
             <p><b>Phone:</b> 9806066848 || 9867063203</p>
             
             
@@ -924,7 +689,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </a>
               
               <a href="https://www.instagram.com" target="_blank">
-                <img src="/images/Untitled design (1).png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+                <img src="images/Untitled design (1).png" alt="Facebook Icon" style="width: 50px; height: 50px;">
             </a>
             </div>
             
@@ -934,17 +699,17 @@ document.addEventListener('DOMContentLoaded', () => {
        
         <div class="footer-column">
             <h3>Quick Links</h3>
-            <a href="base.html">Home</a>
-            <a href="products.html">Shop</a>
-            <a href="cv.html">About Us</a>
-            <a href="contactus.html">Contact Us</a>
+            <a href="#">Home</a>
+            <a href="/html/products.html">Shop</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
         </div>
         <div class="footer-column">
             <h3>Company</h3>
             <a href="#products">SALE!</a>
-            <a href="products.html">Browse Watches</a>
-            <a href="blog.html">Browse Blogs</a>
-            <a href="products.html">Browse Brands</a>
+            <a href="/html/products.html">Browse Watches</a>
+            <a href="/html/blog.html">Browse Testimonials</a>
+            <a href="/html/products.html">Browse Brands</a>
         </div>
        
     </div>
@@ -953,5 +718,5 @@ document.addEventListener('DOMContentLoaded', () => {
         Urban Watches | All Rights Reserved 2025
     </div>
 </footer>
-
+    
 </html>
