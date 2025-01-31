@@ -873,3 +873,122 @@ footer {
      cursor: not-allowed;
      opacity: 0.5;
  }
+ /* Product detail styles */
+.product-detail {
+    width: calc(100% - 20px); /* Accounts for sidebar width + gap */
+    margin-left: auto;
+    padding: 40px;
+}
+
+.product-content {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.product-image {
+    width: 50%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.description {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.description h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #FFD700;
+}
+
+.product-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.brand-name {
+    font-size: 19px;
+    color: #666;
+}
+
+.product-price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.quantity-selector input {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.quantity-selector button {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add-to-cart {
+    background: #FFD700;
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.add-to-cart:hover {
+    background: #FFC700;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.add-to-cart:active {
+    transform: translateY(0);
+}
+
+.description p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
