@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/styles.css">
-        <script src="/js/javascript"></script>
+        <script src="/js/javascript.js"></script>
         
     </head>
 <!--Making Header Transparent-->
@@ -216,20 +216,32 @@ input[type="checkbox"] {
 }
 
 
-      .social-icons {
-      display: flex;
-      gap: 20px; /* Space between icons */
-    }
+.social-icons {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Align icons vertically */
+    margin-top: 10px; /* Adjust margin as needed */
+    gap: 10px; /* Add equal spacing between icons */
+}
 
-    .social-icons a {
-      text-decoration: none; /* Remove underline */
-    }
+.social-icons a {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 40px; /* Set a fixed width for uniform size */
+    height: 40px; /* Set a fixed height for uniform size */
+    background-color: transparent; /* Optional: Add a background for visual effect */
+    border-radius: 50%; 
+    color: #ccc; 
+    font-size: 20px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s; 
+}
 
-    .social-icons img {
-      width: 50px; /* Adjust icon size */
-      height: 50px;
-      transition: transform 0.2s ease; /* Add hover effect */
-    }
+.social-icons a:hover {
+    background-color: #2979FF;; 
+    color: #000; 
+}
       body {
           margin: 0;
           font-family: Arial, sans-serif;
@@ -297,15 +309,18 @@ input[type="checkbox"] {
     </style> 
         <header>
                 <div class="container">
+                    <!-- Logo -->
                     <h1 class="logo"><img src="/images/urban soles. (6).png" alt="logo"></h1>
+                    <!-- Navigation menu -->
                     <nav>
                         <ul class="nav-links">
                             <li><a href="/base.html">Home</a></li>
                             <li><a href="/html/products.html">Products</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="aboutus.html">About Us</a></li>
-                            <li><a href="research.html">Research</a></li>
-                        </ul>        
+                            <li><a href="/html/blog.html">Blog</a></li>
+                            <li><a href="/html/aboutus.html">About Us</a></li>
+                            <li><a href="/html/research.html">Research</a></li>
+                        </ul>   
+                        <!-- shopping cart icon -->     
                 <div class="cart-icon" onclick="toggleCart()">
                     <i class="shopping-cart"><img src="/images/shop-cart.png" style="size: 20px;"></i>
                     <span class="cart-count">0</span>
@@ -313,6 +328,7 @@ input[type="checkbox"] {
                 </nav>
             </div>
         </header>
+        <body>
   <section id="page-header">
     <p style ="color:gold"><b> <a href="base.html" style="text-decoration: none; color: gold;">Home</a> > Shop</b></p>
   </section>
@@ -386,7 +402,7 @@ input[type="checkbox"] {
                     </div>
                     <div class="list-group-item">
                         <label>
-                            <input type="checkbox" class="common-selector brand searchType" value="TITAN">TITAN
+                            <input type="checkbox" class="common-selector brand searchType" value="G-SHOCK">G-SHOCK
                         </label>
                     </div>
                     <div class="list-group-item">
@@ -396,62 +412,29 @@ input[type="checkbox"] {
                     </div>
                 </div>
     
-                <!-- Color List Group -->
-                <div class="list-group">
-                    <h3>COLOR</h3>
-                    <div class="list-group-item">
-                        <label>
-                            <input type="checkbox" class="common-selector color searchType" value="RED">RED
-                        </label>
-                    </div>
-                    <div class="list-group-item">
-                        <label>
-                            <input type="checkbox" class="common-selector color searchType" value="BLUE">BLUE
-                        </label>
-                    </div>
-                    <div class="list-group-item">
-                        <label>
-                            <input type="checkbox" class="common-selector color searchType" value="BLACK">BLACK
-                        </label>
-                    </div>
-                    <div class="list-group-item">
-                        <label>
-                            <input type="checkbox" class="common-selector color searchType" value="WHITE">WHITE
-                        </label>
-                    </div>
-                    <div class="list-group-item">
-                        <label>
-                            <input type="checkbox" class="common-selector color searchType" value="GOLD">GOLD
-                        </label>
-                    </div>
-                    <div class="list-group-item">
-                        <label>
-                            <input type="checkbox" class="common-selector color searchType" value="SILVER">SILVER
-                        </label>
-                    </div>
-                </div>
+
     
                 <!-- Price Range List Group -->
                 <div class="list-group">
                     <h3>PRICE RANGE</h3>
                     <div class="list-group-item">
                         <label>
-                            <input type="checkbox" class="common-selector price searchType" value="0-1000"> NPR0 - NPR1000
+                            <input type="checkbox" class="common-selector price searchType" value="1000-10000"> Rs.1000 - Rs.10000
                         </label>
                     </div>
                     <div class="list-group-item">
                         <label>
-                            <input type="checkbox" class="common-selector price searchType" value="1000-5000"> NPR1000 - NPR5000
+                            <input type="checkbox" class="common-selector price searchType" value="10000-25000"> Rs.10000 - Rs.25000
                         </label>
                     </div>
                     <div class="list-group-item">
                         <label>
-                            <input type="checkbox" class="common-selector price searchType" value="5000-10000"> NPR5000 - NPR10000
+                            <input type="checkbox" class="common-selector price searchType" value="25000-35000"> Rs.25000 - Rs.35000
                         </label>
                     </div>
                     <div class="list-group-item">
                         <label>
-                            <input type="checkbox" class="common-selector price searchType" value="10000-20000"> NPR10000 - NPR20000
+                            <input type="checkbox" class="common-selector price searchType" value="35000-50000"> Rs.35000 - Rs.50000
                         </label>
                     </div>
                 </div>
@@ -514,7 +497,7 @@ input[type="checkbox"] {
                     <img src="/images/c.png"style="width: 75%;"> 
                 </button>
                 <button type="button" class="search-btn">
-                   <a href="produc-4.html"><img src="/images/s.png" style="width: 75%;"></a>
+                   <a href="/html/product-4.html"><img src="/images/s.png" style="width: 75%;"></a>
                 </button>
             </div>
         </div>
@@ -530,12 +513,12 @@ input[type="checkbox"] {
                     <img src="/images/c.png"style="width: 75%;"> 
                 </button>
                 <button type="button" class="search-btn">
-                   <a href="Product-5.html"><img src="/images/s.png" style="width: 75%;"></a>
+                   <a href="/html/product-5.html"><img src="/images/s.png" style="width: 75%;"></a>
                 </button>
             </div>
         </div>
         <h3>Casio Vintage Golds Watch</h3>
-        <div class="produc-brand">Casio</div>
+        <div class="produc-brand">CASIO</div>
         <div class="produc-price">Rs. 36,145 <span class="discoun">Rs. 43,470</span></div>
     </div>
     <div class="produc">
@@ -568,7 +551,7 @@ input[type="checkbox"] {
         </div>
         <h3>Transcend Stainless Steel Mesh Band Watch</h3>
         <div class="produc-brand">TIMEX</div>
-        <div class="produc-price"Rs. 21,995 ></div>
+        <div class="produc-price">Rs. 21,995 </div>
     </div>
     <div class="produc">
         <div class="produc-image">
@@ -608,11 +591,81 @@ input[type="checkbox"] {
 </section>
 <section id="pagination" class="section-p1">
     <div class="pagination-container">
-        <button id="prev-button" class="pagination-button">&lt;</button>
+        <button id="prev-button" class="pagination-button" >&lt;</button>
         <div id="pagination-numbers"></div>
-        <button id="next-button" class="pagination-button">&gt;</button>
+        <button id="next-button" class="pagination-button" >&gt;</button>
     </div>
 </section>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all filter checkboxes and products
+        const brandFilters = document.querySelectorAll('.brand');
+        const priceFilters = document.querySelectorAll('.price');
+        const products = document.querySelectorAll('.produc');
+    
+        // Add event listeners to all checkboxes
+        brandFilters.forEach(filter => {
+            filter.addEventListener('change', filterProducts);
+        });
+    
+        priceFilters.forEach(filter => {
+            filter.addEventListener('change', filterProducts);
+        });
+    
+        function filterProducts() {
+            // Get selected brands and prices
+            const selectedBrands = Array.from(document.querySelectorAll('.brand:checked')).map(input => input.value);
+            const selectedPrices = Array.from(document.querySelectorAll('.price:checked')).map(input => input.value);
+    
+            // Loop through each product
+            products.forEach(product => {
+                const brand = product.querySelector('.produc-brand').textContent;
+                const priceText = product.querySelector('.produc-price').textContent;
+                const price = parseInt(priceText.replace(/[^0-9]/g, '')); // Extracts number from "Rs. 12,115"
+    
+                // Check if product matches selected filters
+                const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(brand);
+                const matchesPrice = selectedPrices.length === 0 || selectedPrices.some(range => {
+                    const [min, max] = range.split('-').map(num => parseInt(num));
+                    return price >= min && price <= max;
+                });
+    
+                // Show or hide product based on filters
+                if (matchesBrand && matchesPrice) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+    
+            // Update result count
+            const visibleProducts = document.querySelectorAll('.produc[style="display: block"]').length;
+            const resultSpan = document.querySelector('.results .highlight');
+            if (resultSpan) {
+                resultSpan.textContent = visibleProducts;
+            }
+        }
+    
+        // Add sorting functionality
+        const sortSelect = document.getElementById('sort-select');
+        if (sortSelect) {
+            sortSelect.addEventListener('change', function() {
+                const productsArray = Array.from(products);
+                const container = document.querySelector('.productt');
+    
+                productsArray.sort((a, b) => {
+                    const priceA = parseInt(a.querySelector('.produc-price').textContent.replace(/[^0-9]/g, ''));
+                    const priceB = parseInt(b.querySelector('.produc-price').textContent.replace(/[^0-9]/g, ''));
+                    
+                    return this.value === 'price-high-to-low' ? priceB - priceA : priceA - priceB;
+                });
+    
+                productsArray.forEach(product => container.appendChild(product));
+            });
+        }
+    });
+    </script>
 <style>
 .pagination-container {
     display: flex;
@@ -641,39 +694,9 @@ input[type="checkbox"] {
     opacity: 0.5;
 }
 
-.pagination-numbers {
-    display: flex;
-    gap: 8px;
-    font-size: 15px;
-}
-
-.pagination-numbers button {
-    border: 1px solid #ccc;
-    background: white;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.pagination-numbers button:hover {
-    background: #f0f0f0;
-}
-
-.pagination-numbers button.active {
-    background: #FFD700;
-    border-color: #FFD700;
-    color: white;
-}
-
-.pagination-numbers .dots {
-    padding: 8px 12px;
-    cursor: default;
-}
 </style>
-<!-- Footer Section -->
-<footer class="footer">
+
+  <footer class="footer">
     <div class="columns">
         <div class="footer-column">
             <h3>Urban Watches</h3>
@@ -685,11 +708,11 @@ input[type="checkbox"] {
             
             <div class="social-icons">
                 <a href="https://www.facebook.com" target="_blank">
-                  <img src="images/Untitled design.png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+                  <img src="/images/Untitled design.png" alt="Facebook Icon" style="width: 50px; height: 50px;">
               </a>
               
               <a href="https://www.instagram.com" target="_blank">
-                <img src="images/Untitled design (1).png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+                <img src="/images/Untitled design (1).png" alt="Facebook Icon" style="width: 50px; height: 50px;">
             </a>
             </div>
             
@@ -699,14 +722,14 @@ input[type="checkbox"] {
        
         <div class="footer-column">
             <h3>Quick Links</h3>
-            <a href="#">Home</a>
+            <a href="/base.html">Home</a>
             <a href="/html/products.html">Shop</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
+            <a href="/html/aboutus.html">About Us</a>
+            <a href="/html/contactus.html">Contact Us</a>
         </div>
         <div class="footer-column">
             <h3>Company</h3>
-            <a href="#products">SALE!</a>
+            <a href="/html/products.html">SALE!</a>
             <a href="/html/products.html">Browse Watches</a>
             <a href="/html/blog.html">Browse Testimonials</a>
             <a href="/html/products.html">Browse Brands</a>

@@ -3,12 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Urban Watches | Product Detail</title>
+        <title>Urban Watches | Product-5 </title>
+        <!-- Meta tags for responsiveness and SEO -->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-    
-       <style>
+        <!-- External CSS and JavaScript files -->
+        <link rel="stylesheet" href="/css/styles.css">
+        <script src="/js/javascript.js"></script>
+    <style>
         /* Header Styles from product.html */
 header {
     background-color: rgba(0, 0, 0, 0.5);
@@ -104,18 +106,30 @@ nav {
 }
 
 .social-icons {
-    display: flex;
-    gap: 20px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Align icons vertically */
+    margin-top: 10px; /* Adjust margin as needed */
+    gap: 10px; /* Add equal spacing between icons */
 }
 
 .social-icons a {
-    text-decoration: none;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 40px; /* Set a fixed width for uniform size */
+    height: 40px; /* Set a fixed height for uniform size */
+    background-color: transparent; /* Optional: Add a background for visual effect */
+    border-radius: 50%; 
+    color: #ccc; 
+    font-size: 20px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s; 
 }
 
-.social-icons img {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.2s ease;
+.social-icons a:hover {
+    background-color: #2979FF;; 
+    color: #000; 
 }
 
 /* Sidebar styling and alignment */
@@ -155,15 +169,19 @@ input[type="checkbox"] {
 
 /* Product detail styles */
 .product-detail {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    width: calc(100% - 20px); /* Accounts for sidebar width + gap */
+    margin-left: auto;
     padding: 40px;
-    align-items: start;
+}
+
+.product-content {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
 .product-image {
-    width: 100%;
+    width: 50%;
     padding: 20px;
     background: #fff;
     border-radius: 8px;
@@ -177,9 +195,28 @@ input[type="checkbox"] {
 }
 
 .product-info {
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.description {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.description h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #FFD700;
+}
+
+.reviews-section {
+    width: 100%;
+    padding: 20px 0;
 }
 
 .product-title {
@@ -249,16 +286,10 @@ input[type="checkbox"] {
     transform: translateY(0);
 }
 
-.description {
-    margin-top: 40px;
-    grid-column: 1 / -1;
-}
-
-.description h3 {
-    font-size: 24px;
+.description p {
+    line-height: 1.6;
+    color: #333;
     margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #FFD700;
 }
 
 /* For mobile responsiveness */
@@ -384,22 +415,25 @@ input[type="checkbox"] {
     color: #333;
 }
        </style>
-    </head>
+       </head>
     <body>
         <!-- Header from product.html -->
         <header>
             <div class="container">
-                <h1 class="logo"><img src="urban soles. (6).png" alt=""></h1>
+                <!-- Logo -->
+                <h1 class="logo"><img src="/images/urban soles. (6).png" alt="logo"></h1>
+                <!-- Navigation menu -->
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="research.html">Research</a></li>
-                    </ul>  
+                        <li><a href="/base.html">Home</a></li>
+                        <li><a href="/html/products.html">Products</a></li>
+                        <li><a href="/html/blog.html">Blog</a></li>
+                        <li><a href="/html/aboutus.html">About Us</a></li>
+                        <li><a href="/html/research.html">Research</a></li>
+                    </ul>   
+                    <!-- shopping cart icon -->     
             <div class="cart-icon" onclick="toggleCart()">
-                <i class="shopping-cart"><img src="shop-cart.png" style="size: 20px;"></i>
+                <i class="shopping-cart"><img src="/images/shop-cart.png" style="size: 20px;"></i>
                 <span class="cart-count">0</span>
             </div>
             </nav>
@@ -428,7 +462,7 @@ input[type="checkbox"] {
                 <button class="go-to-checkout">GO TO CHECKOUT</button>
             </div>
         </div>
-          <section class="containee">
+        <section class="containee">
             <div class="sidebar">
                 <div class="list-group">
                     <h3>BRANDS</h3>
@@ -468,7 +502,7 @@ input[type="checkbox"] {
                             </div>
                             <div class="list-group-item">
                                 <label>
-                                    <input type="checkbox" class="common-selector brand searchType" value="TITAN">TITAN
+                                    <input type="checkbox" class="common-selector brand searchType" value="G-SHOCK">G-SHOCK
                                 </label>
                             </div>
                             <div class="list-group-item">
@@ -478,194 +512,35 @@ input[type="checkbox"] {
                             </div>
                         </div>
             
-                        <!-- Color List Group -->
-                        <div class="list-group">
-                            <h3>COLOR</h3>
-                            <div class="list-group-item">
-                                <label>
-                                    <input type="checkbox" class="common-selector color searchType" value="RED">RED
-                                </label>
-                            </div>
-                            <div class="list-group-item">
-                                <label>
-                                    <input type="checkbox" class="common-selector color searchType" value="BLUE">BLUE
-                                </label>
-                            </div>
-                            <div class="list-group-item">
-                                <label>
-                                    <input type="checkbox" class="common-selector color searchType" value="BLACK">BLACK
-                                </label>
-                            </div>
-                            <div class="list-group-item">
-                                <label>
-                                    <input type="checkbox" class="common-selector color searchType" value="WHITE">WHITE
-                                </label>
-                            </div>
-                            <div class="list-group-item">
-                                <label>
-                                    <input type="checkbox" class="common-selector color searchType" value="GOLD">GOLD
-                                </label>
-                            </div>
-                            <div class="list-group-item">
-                                <label>
-                                    <input type="checkbox" class="common-selector color searchType" value="SILVER">SILVER
-                                </label>
-                            </div>
-                        </div>
+        
             
                         <!-- Price Range List Group -->
                         <div class="list-group">
                             <h3>PRICE RANGE</h3>
                             <div class="list-group-item">
                                 <label>
-                                    <input type="checkbox" class="common-selector price searchType" value="0-1000"> NPR0 - NPR1000
+                                    <input type="checkbox" class="common-selector price searchType" value="1000-10000"> Rs.1000 - Rs.10000
                                 </label>
                             </div>
                             <div class="list-group-item">
                                 <label>
-                                    <input type="checkbox" class="common-selector price searchType" value="1000-5000"> NPR1000 - NPR5000
+                                    <input type="checkbox" class="common-selector price searchType" value="10000-25000"> Rs.10000 - Rs.25000
                                 </label>
                             </div>
                             <div class="list-group-item">
                                 <label>
-                                    <input type="checkbox" class="common-selector price searchType" value="5000-10000"> NPR5000 - NPR10000
+                                    <input type="checkbox" class="common-selector price searchType" value="25000-35000"> Rs.25000 - Rs.35000
                                 </label>
                             </div>
                             <div class="list-group-item">
                                 <label>
-                                    <input type="checkbox" class="common-selector price searchType" value="10000-20000"> NPR10000 - NPR20000
+                                    <input type="checkbox" class="common-selector price searchType" value="35000-50000"> Rs.35000 - Rs.50000
                                 </label>
                             </div>
                         </div>
                     </div>
-            
-          <script>
-            document.addEventListener('DOMContentLoaded', function() {
-    const quantityInput = document.getElementById('quantity');
-    const decreaseBtn = document.querySelector('.decrease');
-    const increaseBtn = document.querySelector('.increase');
-
-    // Prevent negative numbers and non-numeric input
-    quantityInput.addEventListener('input', function() {
-        if (this.value < 0 || this.value === '') {
-            this.value = 1;
-        }
-    });
-
-    decreaseBtn.addEventListener('click', () => {
-        const currentValue = parseInt(quantityInput.value);
-        if (currentValue > 1) {
-            quantityInput.value = currentValue - 1;
-        }
-    });
-
-    increaseBtn.addEventListener('click', () => {
-        const currentValue = parseInt(quantityInput.value);
-        quantityInput.value = currentValue ++;
-    });
-});
-
-function validatePurchase() {
-    const quantity = parseInt(document.getElementById('quantity').value);
-    
-    if (quantity <= 0) {
-        alert('Please select at least 1 item to purchase!');
-        return false;
-    } else {
-        // Here you can add code to handle the purchase
-        alert('Proceeding to purchase ' + quantity + ' item(s)');
-        return true;
-    }
-}
-let cartItems = [];
-let cartCount = 0;
-
-function toggleCart() {
-    const cartPanel = document.querySelector('.cart-panel');
-    cartPanel.classList.toggle('active');
-}
-
-function updateCartCount() {
-    const cartCountElement = document.querySelector('.cart-count');
-    cartCountElement.textContent = cartCount;
-}
-
-function updateCartSubtotal() {
-    const subtotalElement = document.querySelector('.subtotal-amount');
-    const subtotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
-    subtotalElement.textContent = `Rs. ${subtotal.toFixed(2)}`;
-}
-
-function addToCart(product) {
-    const existingItem = cartItems.find(item => item.id === product.id);
-    
-    if (existingItem) {
-        existingItem.quantity += product.quantity;
-    } else {
-        cartItems.push(product);
-    }
-    
-    cartCount += product.quantity;
-    updateCartCount();
-    updateCartSubtotal();
-    renderCartItems();
-}
-
-function renderCartItems() {
-    const cartItemsContainer = document.querySelector('.cart-items');
-    cartItemsContainer.innerHTML = '';
-    
-    cartItems.forEach(item => {
-        const cartItem = document.createElement('div');
-        cartItem.className = 'cart-item';
-        cartItem.innerHTML = `
-            <img src="${item.image}" alt="${item.name}">
-            <div class="cart-item-details">
-                <h4>${item.name}</h4>
-                <p>For ${item.category}</p>
-                <p>x${item.quantity}</p>
-            </div>
-            <button onclick="removeFromCart(${item.id})" class="remove-item">×</button>
-        `;
-        cartItemsContainer.appendChild(cartItem);
-    });
-}
-
-function removeFromCart(productId) {
-    const itemIndex = cartItems.findIndex(item => item.id === productId);
-    if (itemIndex > -1) {
-        cartCount -= cartItems[itemIndex].quantity;
-        cartItems.splice(itemIndex, 1);
-        updateCartCount();
-        updateCartSubtotal();
-        renderCartItems();
-    }
-}
-
-// Modify your validatePurchase function to add items to cart
-function validatePurchase() {
-    const quantity = parseInt(document.getElementById('quantity').value);
-    
-    if (quantity <= 0) {
-        alert('Please select at least 1 item to purchase!');
-        return false;
-    } else {
-        const product = {
-            id: Date.now(), // Use a proper ID in production
-            name: document.querySelector('.product-title').textContent,
-            price: parseFloat(document.querySelector('.product-price').textContent.replace('RS. ', '')),
-            quantity: quantity,
-            image: document.querySelector('.product-image img').src,
-            category: 'Outdoor Sports' // Add proper category
-        };
-        
-        addToCart(product);
-        toggleCart();
-        return true;
-    }
-}
-          </script>
           <div class="product-detail">
+          <div class="product-content">
             <div class="product-image">
                 <img src="/images/81ejTVT9HbL._SS400_.jpg" alt="Product Image">
             </div>
@@ -684,61 +559,88 @@ function validatePurchase() {
                 
                 <button class="add-to-cart" onclick="validatePurchase()">Buy Now</button>
             </div>
+          </div>
             <!-- Description Section -->
         <div class="description">
             <h3>Description</h3>
         <p>G-Shock, a renowned line of watches by Casio, is celebrated for its unmatched durability, rugged design, and advanced functionality. Launched in 1983, G-Shock watches were engineered to withstand extreme conditions, making them a favorite among adventurers, athletes, and military personnel. Built with shock resistance, water resistance, and long-lasting battery life, these watches are designed to endure harsh impacts, vibrations, and environmental challenges. G-Shock models often feature advanced capabilities like world time, solar charging, Bluetooth connectivity, and multi-function alarms, appealing to both tech enthusiasts and outdoor explorers. With a bold and versatile design, G-Shock has become a symbol of resilience and style, embodying a perfect balance between performance and fashion.</p>
-
-        </div>
-        </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="columns">
-            <div class="footer-column">
-                <h3>Urban Watches</h3>
-                <p>Your Time , Your Style and Your Watch.</p>
-                <p><b>Location:</b>  Kamalpokhari,Kathmandu,Bagmati Nepal</p>
-                <p><b>Email:</b><a href="mailto:yoururbanwatches@gmail.com"> yoururbanwatches@gmail.com</a></p>
-                <p><b>Phone:</b> 9806066848 || 9867063203</p>
+            </div>
+            <div class="reviews-section">
+                <h3>Product Reviews</h3>
                 
+                <div class="review">
+                    <div class="review-header">
+                        <div class="stars">★★★★☆</div>
+                        <span class="date">10 Mar 2024</span>
+                    </div>
+                    <div class="reviewer">
+                        <span class="name">Shrutina P.</span>
+                        <span class="verified">✓ Verified Purchase</span>
+                    </div>
+                    <p class="review-text">nice packaging and smell of sunscreen is so good plus it also whitens the skin</p>
                 
-                <div class="social-icons">
-                    <a href="https://www.facebook.com" target="_blank">
-                      <img src="images/Untitled design.png" alt="Facebook Icon" style="width: 50px; height: 50px;">
-                  </a>
-                  
-                  <a href="https://www.instagram.com" target="_blank">
-                    <img src="images/Untitled design (1).png" alt="Facebook Icon" style="width: 50px; height: 50px;">
-                </a>
                 </div>
-                
+            
+                <div class="review">
+                    <div class="review-header">
+                        <div class="stars">★★★★★</div>
+                        <span class="date">3 weeks ago</span>
+                    </div>
+                    <div class="reviewer">
+                        <span class="name">sitadong5</span>
+                        <span class="verified">✓ Verified Purchase</span>
+                    </div>
+                    <p class="review-text">Nice experience..the sunscreen suits my combo skin no breakouts...The brush and sponge were cute and delivery was on time 💯</p>
+                </div>
+            </div>
+</div>
+</section>        
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="columns">
+        <div class="footer-column">
+            <h3>Urban Watches</h3>
+            <p>Your Time , Your Style and Your Watch.</p>
+            <p><b>Location:</b>  Kamalpokhari,Kathmandu,Bagmati Nepal</p>
+            <p><b>Email:</b> yoururbanwatches@gmail.com</p>
+            <p><b>Phone:</b> 9806066848 || 9867063203</p>
+            
+            
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                  <img src="/images/Untitled design.png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+              </a>
               
-  
+              <a href="https://www.instagram.com" target="_blank">
+                <img src="/images/Untitled design (1).png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+            </a>
             </div>
-           
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <a href="base.html">Home</a>
-                <a href="products.html">Shop</a>
-                <a href="cv.html">About Us</a>
-                <a href="contactus.html">Contact Us</a>
-            </div>
-            <div class="footer-column">
-                <h3>Company</h3>
-                <a href="#products">SALE!</a>
-                <a href="products.html">Browse Watches</a>
-                <a href="blog.html">Browse Blogs</a>
-                <a href="products.html">Browse Brands</a>
-            </div>
-           
-        </div>
-        
-        <div class="footer-bottom">
-            Urban Watches | All Rights Reserved 2025
-        </div>
-    </footer>
+            
+          
 
+        </div>
+       
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="/base.html">Home</a>
+            <a href="/html/products.html">Shop</a>
+            <a href="/html/aboutus.html">About Us</a>
+            <a href="/html/contactus.html">Contact Us</a>
+        </div>
+        <div class="footer-column">
+            <h3>Company</h3>
+            <a href="/html/products.html">SALE!</a>
+            <a href="/html/products.html">Browse Watches</a>
+            <a href="/html/blog.html">Browse Testimonials</a>
+            <a href="/html/products.html">Browse Brands</a>
+        </div>
+       
+    </div>
+    
+    <div class="footer-bottom">
+        Urban Watches | All Rights Reserved 2025
+    </div>
+</footer>
         <script>
             // Keep your existing JavaScript for quantity selector
             document.addEventListener('DOMContentLoaded', function() {
@@ -749,13 +651,13 @@ function validatePurchase() {
                 decreaseBtn.addEventListener('click', () => {
                     const currentValue = parseInt(quantityInput.value);
                     if (currentValue > 1) {
-                        quantityInput.value = currentValue - 1;
+                        quantityInput.value = currentValue --;
                     }
                 });
 
                 increaseBtn.addEventListener('click', () => {
                     const currentValue = parseInt(quantityInput.value);
-                    quantityInput.value = currentValue + 1;
+                    quantityInput.value = currentValue ++;
                 });
             });
         </script>
