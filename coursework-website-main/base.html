@@ -27,7 +27,7 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="products.html">Products</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <!-- Added shopping cart icon -->
                         <li><a href="#cart"><img src="images/basket-cart-icon-27.png" alt="Shopping Cart" class="cart-icon"></a></li>
@@ -36,7 +36,7 @@
             </div>
         </header>
         <style>
-          header {
+header {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 16px 0; 
     position: fixed;
@@ -49,8 +49,8 @@
 /* Flex container for header content */
 .container {
     display: flex;
-    flex-direction: row-reverse; /* This will put the logo on the right */
-    justify-content: space-between; /* This creates space between nav and logo */
+    flex-direction: row; /* Changed from row-reverse to row */
+    justify-content: space-between;
     align-items: center;
     max-width: 800px;
     margin: 0 auto;
@@ -64,7 +64,7 @@
 }
 
 .logo img {
-    height: 60px; /* Adjusted height */
+    height: 100px;
     width: auto;
 }
 
@@ -72,7 +72,7 @@
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensures space between logo and other items */
+    justify-content: space-between;
     padding: 10px 20px;
 }
 
@@ -576,7 +576,6 @@ nav {
   -webkit-backface-visibility: hidden;
   
 }
-
 
   </style>          
         </div>
