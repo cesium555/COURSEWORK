@@ -58,17 +58,24 @@ body {
 /* ===============================
    Header Section
 ================================ */
-<!--Making Header Transparent-->
-     header {
-    background-color: rgba(0, 0, 0, 0.5);
+/* <!--Making Header Transparent--> */
+
+
+header {
+        background-color: rgba(0, 0, 0, 0.5);
     padding: 16px 0;
     width: 100%;
     z-index: 1000;
     backdrop-filter: blur(5px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    padding: var(--spacing) 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-.container {
+ .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,14 +114,6 @@ nav {
 
 .nav-links li a:hover {
     color: #f4a261;
-}
-header {
-    background: var(--black);
-    color: var(--white);
-    padding: var(--spacing) 0;
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 
 .logo img {
