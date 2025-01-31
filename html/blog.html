@@ -1,182 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Metadata for the page (such as character encoding and viewport settings for mobile responsiveness) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urban Watches Blog</title>
+    <link rel="stylesheet" href="header-footer.css">
     <style>
-        /* General styles for the entire page */
         * {
-            margin: 0; /* Remove default margins */
-            padding: 0; /* Remove default padding */
-            box-sizing: border-box; /* Make sure all elements include padding and border in their total width/height */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-
-        /* Styling for the body of the page */
+        
         body {
-            font-family: Arial, sans-serif; /* Set the font family to Arial */
-            background-color: #F2F2F2; /* Set background color to light gray */
-            color: #2C2C2C; /* Set text color to dark gray */
-            font-size: 16px; /* Set default font size */
+            font-family: Arial, sans-serif;
+            background-color: #F2F2F2;
+            color: #2C2C2C;
+            font-size: 16px;
         }
 
-        /* Hero section style, typically for a large banner at the top */
         .hero {
-            min-height: 500px; /* Ensure the hero section is at least 500px tall */
-            display: flex; /* Use flexbox layout */
-            flex-direction: column; /* Arrange content in a column */
-            align-items: center; /* Center-align the content horizontally */
-            justify-content: center; /* Center-align the content vertically */
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/18.jpg') center/cover; /* Set a background image with gradient overlay */
-            padding-top: 80px; /* Add padding on top for spacing */
-            margin-bottom: 40px; /* Add space below */
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('images/18.jpg') center/cover;
+            padding-top: 80px;
+            margin-bottom: 40px;
         }
 
-        /* Style for the heading inside the hero section */
         .hero h1 {
-            font-size: 120px; /* Set font size for the title */
-            color: #ffffff; /* Set text color to white */
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a soft shadow to the text */
-            margin-bottom: 20px; /* Space below the heading */
-            font-weight: 700; /* Set font weight to bold */
-            letter-spacing: 4px; /* Add space between letters */
+            font-size: 120px;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 4px;
         }
 
-        /* Style for the paragraph in the hero section */
         .hero p {
-            font-size: 24px; /* Set font size for the paragraph */
-            color: #ffffff; /* Set text color to white */
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a shadow effect to the text */
+            font-size: 24px;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
-        /* Container for the blog content */
         .blog-container {
             position: relative;
-            z-index: 2; /* Ensure the blog container is above other elements */
-            background-color: #F2F2F2; /* Set background to light gray */
-            padding-top: 60px; /* Add padding at the top */
-            width: 80%; /* Set width to 80% of the page */
-            margin: 0 auto; /* Center-align the container */
+            z-index: 2;
+            background-color: #F2F2F2;
+            padding-top: 60px;
+            width: 80%;
+            margin: 0 auto;
         }
 
-        /* Style for individual blog cards (each blog post) */
         .blog-card {
-            display: flex; /* Use flexbox layout */
-            background-color: #FFFFFF; /* Set background color to white */
-            border-radius: 10px; /* Round the corners */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow around the card */
-            width: 100%; /* Set the width to 100% of the container */
-            margin-bottom: 40px; /* Add space below each blog card */
+            display: flex;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin-bottom: 40px;
         }
 
-        /* Style for the image section inside each blog card */
         .blog-image {
-            width: 40%; /* Set image section to 40% of the card's width */
-            padding: 20px; /* Add padding around the image */
+            width: 40%;
+            padding: 20px;
         }
 
-        /* Style for the images inside the blog card */
         .blog-image img {
-            width: 100%; /* Ensure image fills the width of its container */
-            height: 300px; /* Set a fixed height */
-            object-fit: cover; /* Ensure the image covers the area without distorting */
-            border-radius: 5px; /* Round the image corners */
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
         }
 
-        /* Style for the content section of each blog card */
         .blog-content {
-            width: 60%; /* Set content section to 60% of the card's width */
-            padding: 30px; /* Add padding around the content */
+            width: 60%;
+            padding: 30px;
         }
 
-        /* Style for the title inside the blog content */
         .blog-content h2 {
-            font-size: 24px; /* Set font size for the blog title */
-            margin-bottom: 15px; /* Add space below the title */
+            font-size: 24px;
+            margin-bottom: 15px;
         }
 
-        /* Style for the paragraph inside the blog content */
         .blog-content p {
-            font-size: 16px; /* Set font size for the text */
-            margin-bottom: 15px; /* Add space below each paragraph */
-            line-height: 150%; /* Increase line height for better readability */
+            font-size: 16px;
+            margin-bottom: 15px;
+            line-height: 150%;
         }
 
-        /* Style for the "Read More" link */
         .read-more {
-            text-decoration: none; /* Remove underline from link */
-            color: #007BFF; /* Set link color to blue */
-            font-weight: bold; /* Make the link text bold */
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
         }
 
-        /* Mobile-specific styles (for screens with max-width of 768px) */
         @media screen and (max-width: 768px) {
             .hero h1 {
-                font-size: 72px; /* Smaller font size for smaller screens */
+                font-size: 72px;
             }
             
             .hero p {
-                font-size: 18px; /* Smaller font size for paragraph */
+                font-size: 18px;
             }
-
+            
             .hero {
-                height: 70%; /* Reduce hero section height */
+                height: 70%;
             }
 
             .blog-card {
-                flex-direction: column; /* Stack the image and content vertically */
+                flex-direction: column;
             }
 
             .blog-image,
             .blog-content {
-                width: 100%; /* Make both sections take up 100% of the width */
+                width: 100%;
             }
 
             .blog-container {
-                width: 95%; /* Reduce container width on small screens */
+                width: 95%;
             }
         }
 
-        /* Styles for very small screens (max-width 480px) */
         @media screen and (max-width: 480px) {
             .hero h1 {
-                font-size: 48px; /* Further reduce font size for small screens */
+                font-size: 48px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section: Contains navigation and logo -->
     <header>
-        <div class="container">
-            <h1 class="logo"><img src="/images/urban soles. (6).png" alt="logo"></h1>
+        <div class="header-container">
+            <h1 class="logo"><img src="images/urban soles. (6).png" alt="Urban Watches Logo"></h1>
             <nav>
-                <!-- Navigation links for different pages of the website -->
                 <ul class="nav-links">
                     <li><a href="base.html">Home</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="research.html">Research</a></li>
-                </ul>        
-                <div class="cart-icon" onclick="toggleCart()">
-                    <i class="shopping-cart"><img src="/images/shop-cart.png" style="size: 20px;"></i>
-                    <span class="cart-count">0</span> <!-- Cart count to show number of items -->
-                </div>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section: Large banner with title and subheading -->
     <section class="hero">
         <h1>BLOG</h1>
         <p>Where Time Meets Sophistication ⌚</p>
     </section>
 
-    <!-- Blog Content Section: Displays the blog cards -->
     <section class="blog-container">
-        <!-- Blog card 1 -->
         <div class="blog-card">
             <div class="blog-image">
                 <img src="images/12.jpg" alt="Limited Edition Chronograph Collection">
@@ -188,10 +165,9 @@
             </div>
         </div>
 
-        <!-- Blog card 2 -->
         <div class="blog-card">
             <div class="blog-image">
-                <img src="images/13.jpg" alt="Luxury Watch Trends">
+                <img src="images/9783791379753.jpg" alt="Luxury Watch Trends">
             </div>
             <div class="blog-content">
                 <h2>How Technological Advancements Are Transforming Watch Design</h2>
@@ -200,10 +176,9 @@
             </div>
         </div>
 
-        <!-- Blog card 3 -->
         <div class="blog-card">
             <div class="blog-image">
-                <img src="images/17.jpg" alt="Watch Care Guide">
+                <img src="images/pngtree-smart-watches-floating-in-ramadan-themed-background-image_15596009.jpg" alt="Watch Care Guide">
             </div>
             <div class="blog-content">
                 <h2>Technological advancements with watch design and sales</h2>
@@ -214,26 +189,6 @@
         </div>
     </section>
 
-    <!-- Shopping Cart Panel -->
-    <div class="cart-panel">
-        <div class="cart-header">
-            <h3>Shopping Cart</h3>
-            <button class="close-cart" onclick="toggleCart()">×</button>
-        </div>
-        <div class="cart-items">
-            <!-- Cart items will be dynamically added here -->
-        </div>
-        <div class="cart-footer">
-            <div class="cart-subtotal">
-                <span>Cart Subtotal</span>
-                <span class="subtotal-amount">Rs. </span>
-            </div>
-            <button class="go-to-cart">GO TO THE CART</button>
-            <button class="go-to-checkout">GO TO CHECKOUT</button>
-        </div>
-    </div>
-
-    <!-- Footer Section: Contains company information and social media links -->
     <footer class="footer">
         <div class="columns">
             <div class="footer-column">
@@ -244,7 +199,7 @@
                 <p><b>Phone:</b> 9806066848 || 9867063203</p>
                 
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/people/Urban-Watches/61572350075587/" target="_blank">
+                    <a href="https://www.facebook.com" target="_blank">
                         <img src="images/Untitled design.png" alt="Facebook Icon">
                     </a>
                     <a href="https://www.instagram.com/urban_watchess/" target="_blank">
@@ -274,13 +229,5 @@
             Urban Watches | All Rights Reserved 2025
         </div>
     </footer>
-
-    <!-- JavaScript to toggle the cart panel -->
-    <script>
-        function toggleCart() {
-            const cartPanel = document.querySelector('.cart-panel');
-            cartPanel.classList.toggle('active'); // Toggle the visibility of the cart panel
-        }
-    </script>
 </body>
 </html>
