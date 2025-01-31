@@ -37,7 +37,7 @@
 
         th {
             padding: 16px;
-            background-color: #ffdd00;
+            background-color: #FFD700;
             color: #fff;
             width: 50%;
         }
@@ -64,7 +64,7 @@
 
         .img-container {
             width: 100%;
-            aspect-ratio: 16/9;
+            height: 400px;
             position: relative;
             border-radius: 8px;
             overflow: hidden;
@@ -75,8 +75,8 @@
         .img-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: top;
+            object-fit: contain;
+            object-position: center;
             transition: transform 0.3s ease;
         }
 
@@ -84,55 +84,24 @@
             transform: scale(1.02);
         }
 
-        .comparison-text {
+        .pair-comparison {
             font-size: 14px;
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
-            border-left: 3px solid #ffdd00;
+            border-left: 3px solid #FFD700;
             padding: 15px;
             border-radius: 0 4px 4px 0;
             transition: background-color 0.3s ease;
-        }
-
-        .reference-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .reference-link:hover .comparison-text {
-            background-color: #e9ecef;
-        }
-
-        /* Responsive Styles */
-        @media screen and (max-width: 1024px) {
-            .table-container { width: 95%; padding: 15px; }
-            td { padding: 16px; }
-        }
-
-        @media screen and (max-width: 768px) {
-            body { padding-top: 80px; }
-            .table-container { width: 92%; padding: 10px; }
-            td { padding: 12px; }
-            .img-container { aspect-ratio: 4/3; }
-            .comparison-text { font-size: 13px; padding: 12px; }
-        }
-
-        @media screen and (max-width: 480px) {
-            .table-container { width: 90%; padding: 8px; }
-            td { padding: 8px; }
-            .page-title { font-size: 16px; }
-            .comparison-text { font-size: 12px; padding: 10px; }
+            text-align: center;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <h1 class="logo">
-                <img src="images/urban soles. (6).png" alt="Urban Watches Logo">
-            </h1>
+            <h1 class="logo"><img src="images/urban soles. (6).png" alt="Urban Watches Logo"></h1>
             <nav>
                 <ul class="nav-links">
                     <li><a href="base.html">Home</a></li>
@@ -154,7 +123,6 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Home Page Comparison -->
                 <tr>
                     <td>
                         <div class="page-content">
@@ -162,27 +130,25 @@
                             <div class="img-container">
                                 <img src="images/home.png" alt="Urban Watches Home Page" />
                             </div>
-                            <div class="comparison-text">
-                               In Our homepage We wanted to go for a bold and modern look, which is why we used a fiery background with a dark silhouette of the watch. The contrast between the black and orange gives it a strong, eye-catching effect, making it feel more dynamic and stylish. Compared to Rado's soft and elegant theme, ours has a more intense and edgy vibe, which we think makes it stand out more and appeal to a younger, trendier audience.
-                            </div>
                         </div>
                     </td>
                     <td>
                         <div class="page-content">
                             <p class="page-title">Reference Home Page</p>
-                            <a href="https://www.rado.com" target="_blank" class="reference-link">
+                            <a href="https://www.rado.com" target="_blank">
                                 <div class="img-container">
                                     <img src="images/RADO.png" alt="Rado Reference Home Page" />
-                                </div>
-                                <div class="comparison-text">
-                                    Rado, has a very elegant and classy look with soft pink tones and beautifully designed roses surrounding the watch. The whole theme feels romantic and luxurious, which makes sense since it's promoting a Valentine's Day gift. The layout is clean, and the branding is strong, making it look very high-end and premium.
                                 </div>
                             </a>
                         </div>
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="pair-comparison">Urban Watches embraces a bold, fiery background with a sleek, dark silhouette of the watch, contrasting strongly with Rado's soft and elegant theme. The dynamic, edgy vibe appeals to a younger audience, making our homepage stand out with a modern and stylish look. In contrast, Rado's homepage features a soft pink theme with elegant roses, reinforcing a sense of luxury and romance. The clean layout and branding create a high-end, premium feel, catering to a more sophisticated audience.</div>
+                    </td>
+                </tr>
 
-                <!-- Product Page Comparison -->
                 <tr>
                     <td>
                         <div class="page-content">
@@ -190,27 +156,25 @@
                             <div class="img-container">
                                 <img src="images/Productss.png" alt="Urban Watches Product Page" />
                             </div>
-                            <div class="comparison-text">
-                                Our design is clean and modern, with a structured sidebar that allows users to filter by brand, color, and price range, making it easy to navigate. The watches are displayed in an organized grid, with clear pricing and brand names, and a highlighted selection that draws attention to specific products. The top navigation bar blends well with the overall aesthetic, maintaining a premium and professional feel.
-                            </div>
                         </div>
                     </td>
                     <td>
                         <div class="page-content">
                             <p class="page-title">Reference Product Page</p>
-                            <a href="https://www.naviforce-watch.com/shop/" target="_blank" class="reference-link">
+                            <a href="https://www.naviforce-watch.com/shop/" target="_blank">
                                 <div class="img-container">
                                     <img src="images/reference product.PNG" alt="Reference Product Page" />
-                                </div>
-                                <div class="comparison-text">
-                                    This image is from another shopping website i.e. "NAVI" which has a simpler and more basic design. While it effectively displays products, it lacks a dedicated filtering section, making it harder for users to narrow down their choices quickly. The layout is more standard, with large product images but fewer interactive elements. Our webpage provides a more refined and user-friendly experience, making it easier for customers to find exactly what they are looking for while maintaining a sleek and premium look.
                                 </div>
                             </a>
                         </div>
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="pair-comparison">Our design is clean and modern, with a structured sidebar that allows users to filter by brand, color, and price range, making it easy to navigate. The watches are displayed in an organized grid, with clear pricing and brand names, and a highlighted selection that draws attention to specific products. The top navigation bar blends well with the overall aesthetic, maintaining a premium and professional feel. In contrast, the reference product page from NAVI is simpler, with large product images but fewer interactive elements. It lacks a dedicated filtering section, making it harder for users to narrow down choices quickly. Our webpage provides a more refined and user-friendly experience while maintaining a sleek and premium look.</div>
+                    </td>
+                </tr>
 
-                <!-- Blog Page Comparison -->
                 <tr>
                     <td>
                         <div class="page-content">
@@ -218,27 +182,25 @@
                             <div class="img-container">
                                 <img src="images/BLOG.png" alt="Urban Watches Blog Page" />
                             </div>
-                            <div class="comparison-text">
-                                Our blog page follows a sleek and modern design, with a dark theme and a glowing effect around the word "BLOG," which creates a futuristic and sophisticated look. The background features a close-up of a watch, reinforcing the theme of timepieces and luxury. The layout is clean and professional, with a well-structured blog preview that makes it easy to read and engaging.
-                            </div>
                         </div>
                     </td>
                     <td>
                         <div class="page-content">
                             <p class="page-title">Reference Blog Page</p>
-                            <a href="https://www.fitnesstogether.com/blog" target="_blank" class="reference-link">
+                            <a href="https://www.fitnesstogether.com/blog" target="_blank">
                                 <div class="img-container">
                                     <img src="images/reference blog.PNG" alt="Reference Blog Page" />
-                                </div>
-                                <div class="comparison-text">
-                                   This reference blog page has a much simpler and more traditional design. The header uses a plain blue background with bold white text, making it clear but not as visually striking. The layout is straightforward, but it lacks the stylish and immersive feel that our Urban Watches blog has. Overall, our design feels more high-end and polished, creating a stronger brand identity and making the page more visually appealing.
                                 </div>
                             </a>
                         </div>
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="pair-comparison">Our blog page follows a sleek and modern design, with a dark theme and a glowing effect around the word "BLOG," creating a futuristic and sophisticated look. The background features a close-up of a watch, reinforcing the theme of timepieces and luxury. The layout is clean and professional, with a well-structured blog preview that makes it easy to read and engaging. In contrast, the reference blog page from Fitness Together has a much simpler, traditional design with a plain blue header and bold white text. The layout is more straightforward, lacking the stylish and immersive feel that our Urban Watches blog provides.</div>
+                    </td>
+                </tr>
 
-                <!-- About Us Page Comparison -->
                 <tr>
                     <td>
                         <div class="page-content">
@@ -246,27 +208,25 @@
                             <div class="img-container">
                                 <img src="images/About uss.png" alt="Urban Watches About Us Page" />
                             </div>
-                            <div class="comparison-text">
-                                Our Urban Watches webpage focuses on showcasing our development team with a structured and professional design. Each team member has a dedicated profile card displaying their role, expertise, and key technologies, along with options to download their CV or contact them directly. This layout provides a clear and personal introduction to the developers behind the project.
-                            </div>
                         </div>
                     </td>
                     <td>
                         <div class="page-content">
                             <p class="page-title">Reference About Us Page</p>
-                            <a href="https://buffer.com/about" target="_blank" class="reference-link">
+                            <a href="https://buffer.com/about" target="_blank">
                                 <div class="img-container">
                                     <img src="images/About us.PNG" alt="Reference About Us Page" />
-                                </div>
-                                <div class="comparison-text">
-                                    On the other hand, the Buffer page takes a broader approach, introducing the company with a friendly and informal tone. Instead of highlighting individual team members, it emphasizes the collective spirit of the organization through a collage of images and a welcoming message. While Buffer's design feels warm and inviting, our page is more structured and professional, making it easier to learn about each developer's skills and contributions.
                                 </div>
                             </a>
                         </div>
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="pair-comparison">Our About Us page showcases our development team with structured profile cards displaying each team member's role, expertise, and key technologies. This professional layout gives a clear and personal introduction to our developers. In contrast, the Buffer page emphasizes the collective spirit of the organization through a collage of images and a welcoming message. While Buffer's design feels warm and informal, our page provides a more structured and professional presentation, making it easier for visitors to learn about each developer's contributions.</div>
+                    </td>
+                </tr>
 
-                <!-- Contact Page Comparison -->
                 <tr>
                     <td>
                         <div class="page-content">
@@ -274,40 +234,38 @@
                             <div class="img-container">
                                 <img src="images/abouh.png" alt="Urban Watches Contact Page" />
                             </div>
-                            <div class="comparison-text">
-                                Our Urban Watches contact page is simple and minimalistic, focusing on ease of access. It provides a direct way for users to get in touch with us, featuring a clean form with fields for name, email, and subject. Additionally, we display our location at the top for added convenience. The design is straightforward, making it easy for visitors to reach out for any inquiries.
-                            </div>
                         </div>
                     </td>
                     <td>
                         <div class="page-content">
                             <p class="page-title">Reference Contact Us Page</p>
-                            <a href="https://fitnesstogether.com/contact-us" target="_blank" class="reference-link">
+                            <a href="https://fitnesstogether.com/contact-us" target="_blank">
                                 <div class="img-container">
                                     <img src="images/reference contact us.PNG" alt="Reference Contact Page" />
-                                </div>
-                                <div class="comparison-text">
-                                    On the other hand, the reference contact page from Fitness Together has a more structured and corporate feel. It includes a detailed form with a comment section and a prominent submit button. Additionally, it offers external links for users to find specific locations and has a footer section with social media icons, encouraging engagement. While our page is more minimal and to the point, the reference page focuses on providing multiple ways for users to connect with them.
                                 </div>
                             </a>
                         </div>
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="pair-comparison">Our contact page is simple and minimalistic, focusing on ease of access with a clean form for name, email, and subject. We also display our location for added convenience. In contrast, the reference contact page from Fitness Together offers a more detailed form, including a comment section and links for location-specific inquiries. Our design is more straightforward, while theirs offers multiple ways for users to connect, including a footer with social media icons.</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
-
     <footer class="footer">
         <div class="columns">
             <div class="footer-column">
                 <h3>Urban Watches</h3>
                 <p>Your Time, Your Style and Your Watch.</p>
-                <p><b>Location:</b> Kamalpokhari,Kathmandu,Bagmati Nepal</p>
+                <p><b>Location:</b> Kamalpokhari, Kathmandu, Bagmati Nepal</p>
                 <p><b>Email:</b><a href="mailto:yoururbanwatches@gmail.com"> yoururbanwatches@gmail.com</a></p>
                 <p><b>Phone:</b> 9806066848 || 9867063203</p>
                 
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/people/Urban-Watches/61572350075587/" target="_blank">
+                    <a href="https://www.facebook.com" target="_blank">
                         <img src="images/Untitled design.png" alt="Facebook Icon">
                     </a>
                     <a href="https://www.instagram.com/urban_watchess/" target="_blank">
@@ -315,7 +273,7 @@
                     </a>
                 </div>
             </div>
-           
+            
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <a href="#">Home</a>
