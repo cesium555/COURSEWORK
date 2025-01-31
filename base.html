@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- External CSS and JavaScript files -->
-        <link rel="stylesheet" href="/coursework-website-main/css/styles.css">
+        <link rel="stylesheet" href="./css/styles.css">
         <script src="js/javascript.js"></script>
     </head>
 
@@ -203,19 +203,20 @@ nav {
     color: #333;
 }
 
-/* Product Grid Layout */
+/* Product Grid Layout - Converted to Flexbox */
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Shows 3 products per row */
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     padding: 20px;
-    justify-items: center;
+    justify-content: center;
 }
+
 .product {
+    flex: 0 0 280px; /* Fixed width, won't grow or shrink */
     background: #fff;
     border-radius: 15px;
     padding: 20px;
-    width: 280px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
@@ -258,7 +259,7 @@ nav {
 .product button {
     width: 100%;
     padding: 12px;
-    background: #0D1127;
+    background: #F3B700;
     color: white;
     border: none;
     border-radius: 8px;
@@ -268,7 +269,7 @@ nav {
 }
 
 .product button:hover {
-    background: #2979FF;
+    background:#FAA300;
     transform: translateY(-2px);
 }
 
@@ -286,6 +287,24 @@ nav {
     font-weight: bold;
 }
 
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 992px) {
+    .product-grid {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product {
+        flex: 0 0 100%;
+    }
+}
 </style>
 
 <!-- Blog Section -->
@@ -364,7 +383,6 @@ nav {
   padding: 50px 50px;
   background-color: #f8f9fa;
   width: 100%;
-
 }
 
 .container1 {
@@ -373,7 +391,6 @@ nav {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  
 }
 
 /* Section Headers */
@@ -396,23 +413,25 @@ nav {
   margin-right: auto;
 }
 
-/* Blog Grid Layout */
+/* Blog Grid Layout - Converted to Flexbox */
 .blog-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Shows 3 products per row */
+  display: flex;
+  flex-wrap: wrap;
   gap: 25px;
   margin-bottom: 40px;
-  padding: 0 15px; /* Added padding for better spacing on smaller screens */
+  padding: 0 15px;
+  justify-content: center;
 }
 
 /* Blog Card Styling */
 .blog-card {
+  flex: 0 0 calc(25% - 25px); /* 25% width for 4 cards per row, accounting for gap */
   background: #ffffff;
   border-radius: 8px;
   padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures vertical alignment */
+  justify-content: space-between;
   align-items: flex-start;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -420,7 +439,7 @@ nav {
   overflow: hidden;
   min-height: 400px;
   cursor: pointer;
-  will-change: transform; /* Improve hover transition */
+  will-change: transform;
 }
 
 .blog-card:hover {
@@ -438,7 +457,6 @@ nav {
   display: block;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  
 }
 
 /* Blog Content */
@@ -463,11 +481,34 @@ nav {
   flex-grow: 1;
 }
 
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+  .blog-card {
+    flex: 0 0 calc(33.333% - 25px); /* 3 cards per row */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .blog-card {
+    flex: 0 0 calc(50% - 25px); /* 2 cards per row */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .blog-card {
+    flex: 0 0 100%; /* 1 card per row */
+  }
+  
+  .blog-section {
+    padding: 30px 20px;
+  }
+}
+
 /* Action Buttons */
 .read-more {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0D1127;
+  background-color: #F3B700;
   color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
@@ -480,7 +521,7 @@ nav {
 }
 
 .read-more:hover {
-  background-color: #444;
+  background-color: #E57C04;
 }
 
 /* CTA Section */
@@ -492,7 +533,7 @@ nav {
 .cta-button {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #0D1127;
+  background-color:  #F3B700;
   color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
@@ -502,54 +543,14 @@ nav {
 }
 
 .cta-button:hover {
-  background-color: #444;
+  background-color: #E57C04;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 992px) {
-  .blog-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .blog-card {
-    min-height: 380px;
-  }
-}
-
-@media (max-width: 768px) {
-  .blog-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .section-title {
-    font-size: 24px;
-  }
-
-  .blog-card {
-    padding: 12px;
-    min-height: 360px;
-  }
-
-  .blog-image {
-    height: 200px;
-  }
-
-  .blog-title {
-    font-size: 16px;
-    min-height: auto;
-  }
-
-  .blog-description {
-    font-size: 13px;
-    margin-bottom: 15px;
-    max-height: 60px;
-  }
 
   .read-more {
     padding: 8px 16px;
   }
-}
+
 
 /* Additional Enhancements */
 .blog-card::after {
@@ -607,15 +608,15 @@ nav {
 }
 
       .feature.yellow {
-          background-color: #0d1127;
+          background-color: #1C1C1C;
       }
 
       .feature.orange {
-          background-color: #0d1127;
+          background-color: #1C1C1C
       }
 
       .feature.dark-blue {
-          background-color: #0D1127;
+          background-color:  #1C1C1C;
       }
 
       .footer {
