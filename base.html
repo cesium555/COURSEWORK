@@ -4,121 +4,51 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Urban Watches | Home </title>
-        <!-- Meta tags for responsiveness and SEO -->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- External CSS and JavaScript files -->
-        <link rel="stylesheet" href="./css/styles.css">
-        <script src="js/javascript.js"></script>
+        <link rel="stylesheet" href="/css/styles.css">
+        <script src="/js/javascript.js"></script>
+        
     </head>
-
-    <!-- Header Styling with transparent background and blur effect -->
-   
-    <body>
-      
-         <!-- Header section with navigation -->
-         <header>
-            <div class="container">
-                <!-- Logo -->
-                <h1 class="logo"><img src="images/urban soles. (6).png" alt="Urban Watches Logo"></h1>
-                <!-- Navigation menu -->
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <!-- Added shopping cart icon -->
-                        <li><a href="#cart"><img src="images/basket-cart-icon-27.png" alt="Shopping Cart" class="cart-icon"></a></li>
-                    </ul>
+        <header>
+                <div class="container">
+                    <!-- Logo -->
+                    <h1 class="logo"><img src="/images/urban soles. (6).png" alt="logo"></h1>
+                    <!-- Navigation menu -->
+                    <nav>
+                        <ul class="nav-links">
+                            <li><a href="/base.html">Home</a></li>
+                            <li><a href="/html/products.html">Products</a></li>
+                            <li><a href="/html/blog.html">Blog</a></li>
+                            <li><a href="/html/aboutus.html">About Us</a></li>
+                            <li><a href="/html/research.html">Research</a></li>
+                        </ul>   
+                        <!-- shopping cart icon -->     
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="shopping-cart"><img src="/images/shop-cart.png" style="size: 20px;"></i>
+                    <span class="cart-count">0</span>
+                </div>
                 </nav>
             </div>
         </header>
-        <style>
-header {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 16px 0; 
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Flex container for header content */
-.container {
-    display: flex;
-    flex-direction: row; /* Changed from row-reverse to row */
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Logo styling */
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 100px;
-    width: auto;
-}
-
-/* Navigation styling */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-}
-
-/* Navigation links container */
-.nav-links {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
-
-/* Individual navigation links */
-.nav-links li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-/* Hover effect for navigation links */
-.nav-links li a:hover {
-    color: #f4a261;
-}
-
-/* Shopping cart icon styling */
-.cart-icon {
-    width: 24px;
-    height: 24px;
-    filter: invert(1);
-    transition: transform 0.3s ease;
-}
-
-/* Hover effect for cart icon */
-.cart-icon:hover {
-    transform: scale(1.1);
-}
-
-        </style>
+        <body>
+            <div class="cart-panel">
+                <div class="cart-header">
+                    <h3>Shopping Cart</h3>
+                    <button class="close-cart" onclick="toggleCart()">×</button>
+                </div>
+                <div class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="cart-footer">
+                    <div class="cart-subtotal">
+                        <span>Cart Subtotal</span>
+                        <span class="subtotal-amount">Rs. </span>
+                    </div>
+                    <button class="go-to-cart">GO TO THE CART</button>
+                    <button class="go-to-checkout">GO TO CHECKOUT</button>
+                </div>
+            </div>
         <!-- Video Section -->
         <section id="home" class="hero">
             <div class="hero-content">
@@ -131,7 +61,7 @@ nav {
             <!--Using of Inline CSS to style ShopNow Button.-->
         </section>
         <section id="buynow" style="display: flex; justify-content: center; align-items: center; padding: 2rem 0; background-color: white; color: #fff;">
-            <a href="#products" style="background: #0D1127; color: #fff; padding: 1rem 2rem; font-size: 1.2rem; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; display: inline-block;" 
+            <a href="/html/products.html" style="background: #0D1127; color: #fff; padding: 1rem 2rem; font-size: 1.2rem; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; display: inline-block;" 
                onmouseover="this.style.background='#e76f51'; this.style.transform='scale(1.05)';" 
                onmouseout="this.style.background='#f4a261'; this.style.transform='scale(1)';">
                 Shop Now
@@ -147,37 +77,37 @@ nav {
           <img src="images/617PuITXFNL._SS1000_.jpg" alt="Luxury Watch">
           <h3>Fossil Men Stainless Nate Jr1401</h3>
           <p>Rs.25,500 <span class="discount">Rs.50,000</span></p>
-          <button>BUY NOW</button>
+          <a href="/html/product-9.html"><button>BUY NOW</button></a>
       </div>
       <div class="product">
           <img src="images/c12dc942-9c96-4a4f-9c2f-6ddfce1d82b11622187540841-1.jpg" alt="Casual Watch">
           <h3>Tissot Men Black Analogue Watch</h3>
           <p>Rs.30,599 <span class="discount">Rs.42,000</span></p>
-          <button>BUY NOW</button>
+          <a href="/html/product-19.html"><button>BUY NOW</button></a>
       </div>
       <div class="product">
           <img src="images/517AIIesGqL._SS400_.jpg" alt="Casual Watch">
-          <h3>Titan Regalia Maritime Anthracite NS1873KM01</h3>
+          <h3>Sonata Regalia Maritime Anthracite NS1873KM01</h3>
           <p>Rs.35,599 <span class="discount">Rs.40,000</span></p>
-          <button>BUY NOW</button>    
+          <a href="/html/product-18.html"><button>BUY NOW</button></a>   
       </div>
       <div class="product">
           <img src="images/71-xPhJRhHL._SS400_.jpg" alt="Casual Watch">
           <h3>TIMEX Men Multifunction Black Round Dial Watch - TWEG18902</h3>
           <p>Rs.15,599 <span class="discount">Rs.30,000</span></p>
-          <button>BUY NOW</button>
+          <a href="/html/product-1.html"><button>BUY NOW</button></a>
       </div>
       <div class="product">
           <img src="images/81ejTVT9HbL._SS400_.jpg" alt="Casual Watch">
           <h3>Casio G-Shock Digital Black Dial Men's Watch - G760</h3>
           <p>Rs.15,599 <span class="discount">Rs.30,000</span></p>
-          <button>BUY NOW</button>
+          <a href="/html/product-6.html"><button>BUY NOW</button></a>
       </div>
       <div class="product">
           <img src="images/71RglOBXeBL._SS400_.jpg" alt="Casual Watch">
           <h3>Casio G-Shock Digital Military Edition.</h3>
           <p>Rs.15,599 <span class="discount">Rs.30,000</span></p>
-          <button>BUY NOW</button>
+          <a href="/html/product-3.html"><button>BUY NOW</button></a>
       </div>
   </div>
 </section>
@@ -286,6 +216,111 @@ nav {
     font-size: 14px;
     font-weight: bold;
 }
+.hero {
+    height: 1000px; /* A common fixed height for hero sections */
+    position: relative;
+    overflow: hidden;
+    padding-top: 0px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 100px;
+}
+
+.promo-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1200px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Overlay for better text visibility */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Shop Now Button Enhancement */
+.shop-now-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(45deg, #f4a261, #e76f51);
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    z-index: 2;
+    position: relative;
+    margin-top: 30px;
+}
+
+.shop-now-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+}
+/* Video Section Styling */
+.video-section {
+    text-align: center;
+    padding: 32px 0;
+    background-color: #f9f9f9;
+}
+
+.video-section h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.promo-video {
+    max-width: 100%;
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links li a {
+        font-size: 14px;
+    }
+
+    .hero-content {
+        padding: 0 16px;
+    }
+}
+
+
 
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 992px) {
@@ -577,14 +612,8 @@ nav {
   -webkit-backface-visibility: hidden;
   
 }
-
-  </style>          
-        </div>
-    </section>
-    
-
 <!--Styling of Footer-->
-    <style>
+
       body {
           margin: 0;
           font-family: Arial, sans-serif;
@@ -618,103 +647,10 @@ nav {
       .feature.dark-blue {
           background-color:  #1C1C1C;
       }
+  </style>          
+        </div>
+    </section>
 
-      .footer {
-    background-color: #1C1C1C;
-    color: #ccc;
-    padding: 20px 15px; /* Reduced padding */
-}
-
-.footer .columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.footer-column {
-    flex: 1;
-    padding: 10px; /* Reduced padding */
-    min-width: 150px; /* Optional adjustment for smaller columns */
-}
-
-.footer-column h3 {
-    color: #FFD700;
-    margin-bottom: 10px; /* Reduced margin */
-}
-
-.footer-column a {
-    color: #ccc;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 8px; /* Reduced margin */
-}
-
-.footer-column a:hover {
-    color: #fff;
-}
-
-.footer .contact {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact input, .contact textarea {
-    width: 100%;
-    margin-bottom: 8px; /* Reduced margin */
-    padding: 8px; /* Reduced padding */
-    border: none;
-    border-radius: 5px;
-}
-
-.contact button {
-    padding: 8px; /* Reduced padding */
-    background-color: #FFD700;
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact button:hover {
-    background-color: #FFC107;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 10px; /* Reduced margin */
-    color: #fff;
-    font-size: 14px; /* Optional smaller font size */
-}
-
-.social-icons {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the icons horizontally */
-    align-items: center; /* Align icons vertically */
-    margin-top: 10px; /* Adjust margin as needed */
-    gap: 10px; /* Add equal spacing between icons */
-}
-
-.social-icons a {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    width: 40px; /* Set a fixed width for uniform size */
-    height: 40px; /* Set a fixed height for uniform size */
-    background-color: transparent; /* Optional: Add a background for visual effect */
-    border-radius: 50%; 
-    color: #ccc; 
-    font-size: 20px; 
-    text-decoration: none; 
-    transition: background-color 0.3s, color 0.3s; 
-}
-
-.social-icons a:hover {
-    background-color: #2979FF;; 
-    color: #000; 
-}
-
-  </style>
-</head>
 <body>
 
   <!-- Features Section -->
@@ -732,54 +668,53 @@ nav {
           <p>ALL OVER NEPAL</p>
       </div>
   </div>
+</body>
 
   <!-- Footer Section -->
   <footer class="footer">
-      <div class="columns">
-          <div class="footer-column">
-              <h3>Urban Watches</h3>
-              <p>Your Time , Your Style and Your Watch.</p>
-              <p><b>Location:</b>  Kamalpokhari,Kathmandu,Bagmati Nepal</p>
-              <p><b>Email:</b> yoururbanwatches@gmail.com</p>
-              <p><b>Phone:</b> 9806066848 || 9867063203</p>
-              
-              
-              <div class="social-icons">
-                  <a href="https://www.facebook.com" target="_blank">
-                    <img src="images/Untitled design.png" alt="Facebook Icon" style="width: 50px; height: 50px;">
-                </a>
-                
-                <a href="https://www.instagram.com" target="_blank">
-                  <img src="images/Untitled design (1).png" alt="Facebook Icon" style="width: 50px; height: 50px;">
-              </a>
-              </div>
-              
+    <div class="columns">
+        <div class="footer-column">
+            <h3>Urban Watches</h3>
+            <p>Your Time , Your Style and Your Watch.</p>
+            <p><b>Location:</b>  Kamalpokhari,Kathmandu,Bagmati Nepal</p>
+            <p><b>Email:<a href="mailto:yoururbanwatches@gmail.com?"></b> yoururbanwatches@gmail.com</p></a>
+            <p><b>Phone:</b> 9806066848 || 9867063203</p>
             
+            
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                  <img src="/images/Untitled design.png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+              </a>
+              
+              <a href="https://www.instagram.com/urban_watchess?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <img src="/images/Untitled design (1).png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+            </a>
+            </div>
+            
+          
 
-          </div>
-         
-          <div class="footer-column">
-              <h3>Quick Links</h3>
-              <a href="#">Home</a>
-              <a href="#">Shop</a>
-              <a href="#">About Us</a>
-              <a href="#">Contact Us</a>
-          </div>
-          <div class="footer-column">
-              <h3>Company</h3>
-              <a href="products.html">SALE!</a>
-              <a href="products.html>Browse Watches</a>
-              <a href="products.html">Browse Testimonials</a>
-              <a href="products.html">Browse Brands</a>
-          </div>
-         
-      </div>
-      
-      <div class="footer-bottom">
-          Urban Watches | All Rights Reserved 2025
-      </div>
-  </footer>
-      
-        
-    </body>
+        </div>
+       
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="/base.html">Home</a>
+            <a href="/html/products.html">Shop</a>
+            <a href="/html/aboutus.html">About Us</a>
+            <a href="/html/contactus.html">Contact Us</a>
+        </div>
+        <div class="footer-column">
+            <h3>Company</h3>
+            <a href="/html/products.html">SALE!</a>
+            <a href="/html/products.html">Browse Watches</a>
+            <a href="/html/blog.html">Browse Testimonials</a>
+            <a href="/html/products.html">Browse Brands</a>
+        </div>
+       
+    </div>
+    
+    <div class="footer-bottom">
+        Urban Watches | All Rights Reserved 2025
+    </div>
+</footer>
+    
 </html>
