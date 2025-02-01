@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Urban Watches | Product-20 </title>
+        <!-- Meta tags for responsiveness and SEO -->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- External CSS and JavaScript files -->
+        <link rel="stylesheet" href="/css/styles.css">
+        <script src="/js/javascript.js"></script>
+       </head>
+    <body>
+        <!-- Header from product.html -->
+        <header>
+            <div class="container">
+                <!-- Logo -->
+                <h1 class="logo"><img src="/images/urban soles. (6).png" alt="logo"></h1>
+                <!-- Navigation menu -->
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="/base.html">Home</a></li>
+                        <li><a href="/html/products.html">Products</a></li>
+                        <li><a href="/html/blog.html">Blog</a></li>
+                        <li><a href="/html/aboutus.html">About Us</a></li>
+                        <li><a href="/html/research.html">Research</a></li>
+                    </ul>   
+                    <!-- shopping cart icon -->     
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="shopping-cart"><img src="/images/shop-cart.png" style="size: 20px;"></i>
+                <span class="cart-count">0</span>
+            </div>
+            </nav>
+        </div>
+    </header>
+        <section id="page-header">
+            <p style ="color:gold"><b> <a href="base.html" style="text-decoration: none; color: gold;">Home</a> > <a href="base.html" style="text-decoration: none; color: gold;">Shop</a></b></p>
+          </section>
+          <div class="heading">
+            <h2 class="styled-heading">WATCHES</h2>
+        </div>
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button class="close-cart" onclick="toggleCart()">×</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-subtotal">
+                    <span>Cart Subtotal</span>
+                    <span class="subtotal-amount">Rs. 0.00</span>
+                </div>
+                <button class="go-to-cart">GO TO THE CART</button>
+                <button class="go-to-checkout">GO TO CHECKOUT</button>
+            </div>
+        </div>
+          <section class="containee">
+            <div class="sidebar">
+                <div class="list-group">
+                    <h3>BRANDS</h3>
+                            <div class="list-group-item">
+                                <label>
+                                    <input type="checkbox" class="common-selector brand searchType" value="OMEGA">OMEGA
+                                </label>
+                            </div>
+                            <div class="list-group-item">
+                                <label>
+                                    <input type="checkbox" class="common-selector brand searchType" value="RADO">RADO
+                                </label>
+                            </div>
+                            <div class="list-group-item">
+                                <label>
+                                    <input type="checkbox" class="common-selector brand searchType" value="TISSOT">TISSOT
+                                </label>
+                            </div>
+                            <div class="list-group-item">
+                                <label>
+                                    <input type="checkbox" class="common-selector brand searchType" value="CASIO">CASIO
+                                </label>
+                            </div>
+                            <div class="list-group-item">
+                                <label>
+                                    <input type="checkbox" class="common-selector brand searchType" value="FOSSIL">FOSSIL
+                                </label>
+                            </div>
+                            <div class="list-group-item">
+                                <label>
+                                    <input type="checkbox" class="common-selector brand searchType" value="TIMEX">TIMEX
+                                </label>
+                            </div>
+                            <div class="list-group-item">
+                                <label>
+                                    <input type="checkbox" class="common-selector brand searchType" value="SONATA">SONATA
+                            </div>
+                            <div class="list-group-item">
+                                <label>
+                                    <input type="checkbox" class="common-selector brand searchType" value="TITAN">TITAN
+                                </label>
+                            </div>
+                            <div class="list-group-item">
+                                <label>
+                                    <input type="checkbox" class="common-selector brand searchType" value="Q&Q">Q&Q
+                                </label>
+                            </div>
+                        </div>
+            
+                        <!-- Price Range List Group -->
+                        <div class="list-group">
+                            <h3>PRICE RANGE</h3>
+                            <div class="list-group-item">
+                                <label>
+                                    <input type="checkbox" class="common-selector price searchType" value="0-1000"> NPR0 - NPR1000
+                                </label>
+                            </div>
+                            <div class="list-group-item">
+                                <label>
+                                    <input type="checkbox" class="common-selector price searchType" value="1000-5000"> NPR1000 - NPR5000
+                                </label>
+                            </div>
+                            <div class="list-group-item">
+                                <label>
+                                    <input type="checkbox" class="common-selector price searchType" value="5000-10000"> NPR5000 - NPR10000
+                                </label>
+                            </div>
+                            <div class="list-group-item">
+                                <label>
+                                    <input type="checkbox" class="common-selector price searchType" value="10000-20000"> NPR10000 - NPR20000
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+            <div class="product-detail">
+            <div class="product-content">
+            <div class="product-image">
+                <img src="/images/SNE583P1.png" alt="green seiko">
+            </div>
+            
+            <div class="product-info">
+                <h1 class="product-title">SEIKO 5 Boutique Green Stainless Steel</h1>
+                <div class="brand-name">SEIKO</div>
+                <div class="product-price">RS. 28,613</div>
+                
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <button class="decrease">-</button>
+                    <input type="number" id="quantity" value="0" min="1">
+                    <button class="increase">+</button>
+                </div>
+                
+                <button class="add-to-cart" onclick="validatePurchase()">Buy Now</button>
+            </div>
+            </div>
+            <!-- Description Section -->
+        <div class="description">
+            <h3>Description</h3>
+            <P>
+                Seiko is a globally renowned Japanese watch brand known for its innovation, craftsmanship, and reliable performance. Founded in 1881, the brand offers a diverse range of timepieces, from elegant dress watches to rugged dive models and advanced solar and kinetic-powered designs. Seiko is celebrated for pioneering quartz technology and creating high-precision mechanical movements, making it a favorite among watch enthusiasts for its blend of affordability, innovation, and timeless style.</P>   </div>
+                <div class="reviews-section">
+                    <h3>Product Reviews</h3>
+                    
+                    <div class="review">
+                        <div class="review-header">
+                            <div class="stars">★★★★★</div>
+                            <span class="date">10 Jun 2020</span>
+                        </div>
+                        <div class="reviewer">
+                            <span class="name">Laik Pic.</span>
+                            <span class="verified">✓ Verified Purchase</span>
+                        </div>
+                        <p class="review-text">I love the craftsmanship and attention to detail in this watch. The battery life is great, and it easily elevates any outfit with its stylish look.</p>
+                    </div>
+                
+                    <div class="review">
+                        <div class="review-header">
+                            <div class="stars">★★★☆☆</div>
+                            <span class="date">5 months ago</span>
+                        </div>
+                        <div class="reviewer">
+                            <span class="name">Rakes Va.</span>
+                            <span class="verified">✓ Verified Purchase</span>
+                        </div>
+                        <p class="review-text">I've owned my Seiko for years, and it continues to impress with its accurate timekeeping and durability. The craftsmanship rivals far more expensive brands, making it an excellent value for the price.</p>
+                       </div>
+                </div>
+              </div>
+    </section>
+ <!-- Footer Section -->
+ <footer class="footer">
+    <div class="columns">
+        <div class="footer-column">
+            <h3>Urban Watches</h3>
+            <p>Your Time , Your Style and Your Watch.</p>
+            <p><b>Location:</b>  Kamalpokhari,Kathmandu,Bagmati Nepal</p>
+            <p><b>Email:</b> yoururbanwatches@gmail.com</p>
+            <p><b>Phone:</b> 9806066848 || 9867063203</p>
+            
+            
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                  <img src="/images/Untitled design.png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+              </a>
+              
+              <a href="https://www.instagram.com" target="_blank">
+                <img src="/images/Untitled design (1).png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+            </a>
+            </div>
+            
+          
+
+        </div>
+       
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="/base.html">Home</a>
+            <a href="/html/products.html">Shop</a>
+            <a href="/html/aboutus.html">About Us</a>
+            <a href="/html/contactus.html">Contact Us</a>
+        </div>
+        <div class="footer-column">
+            <h3>Company</h3>
+            <a href="/html/products.html">SALE!</a>
+            <a href="/html/products.html">Browse Watches</a>
+            <a href="/html/blog.html">Browse Testimonials</a>
+            <a href="/html/products.html">Browse Brands</a>
+        </div>
+       
+    </div>
+    
+    <div class="footer-bottom">
+        Urban Watches | All Rights Reserved 2025
+    </div>
+</footer>
+        <script>
+            // Keep your existing JavaScript for quantity selector
+            document.addEventListener('DOMContentLoaded', function() {
+                const quantityInput = document.getElementById('quantity');
+                const decreaseBtn = document.querySelector('.decrease');
+                const increaseBtn = document.querySelector('.increase');
+
+                decreaseBtn.addEventListener('click', () => {
+                    const currentValue = parseInt(quantityInput.value);
+                    if (currentValue > 1) {
+                        quantityInput.value = currentValue --;
+                    }
+                });
+
+                increaseBtn.addEventListener('click', () => {
+                    const currentValue = parseInt(quantityInput.value);
+                    quantityInput.value = currentValue ++;
+                });
+            });
+        </script>
+    </body>
+</html>

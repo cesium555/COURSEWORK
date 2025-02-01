@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Urban Watches | Product </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/styles.css">
+        <script src="/js/javascript.js"></script>
+        
+    </head>
+        <header>
+                <div class="container">
+                    <!-- Logo -->
+                    <h1 class="logo"><img src="/images/urban soles. (6).png" alt="logo"></h1>
+                    <!-- Navigation menu -->
+                    <nav>
+                        <ul class="nav-links">
+                            <li><a href="/base.html">Home</a></li>
+                            <li><a href="/html/products.html">Products</a></li>
+                            <li><a href="/html/blog.html">Blog</a></li>
+                            <li><a href="/html/aboutus.html">About Us</a></li>
+                            <li><a href="/html/research.html">Research</a></li>
+                        </ul>   
+                        <!-- shopping cart icon -->     
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="shopping-cart"><img src="/images/shop-cart.png" style="size: 20px;"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                </nav>
+            </div>
+        </header>
+        <body>
+  <section id="page-header">
+    <p style ="color:gold"><b> <a href="base.html" style="text-decoration: none; color: gold;">Home</a> > Shop</b></p>
+  </section>
+  <div class="heading">
+    <h2 class="styled-heading">WATCHES</h2>
+    <div class="results-sort">
+        <p class="results">SHOWING RESULTS....</p>
+        <div class="sort-container">
+            <label for="sort-select" class="sort-label">SORT BY:</label>
+            <select id="sort-select" class="sort-dropdown">
+                <option value="price-high-to-low">Price (High to Low)</option>
+                <option value="price-low-to-high">Price (Low to High)</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="cart-panel">
+    <div class="cart-header">
+        <h3>Shopping Cart</h3>
+        <button class="close-cart" onclick="toggleCart()">×</button>
+    </div>
+    <div class="cart-items">
+        <!-- Cart items will be dynamically added here -->
+    </div>
+    <div class="cart-footer">
+        <div class="cart-subtotal">
+            <span>Cart Subtotal</span>
+            <span class="subtotal-amount">Rs. </span>
+        </div>
+        <button class="go-to-cart">GO TO THE CART</button>
+        <button class="go-to-checkout">GO TO CHECKOUT</button>
+    </div>
+</div>
+  <section class="containee">
+    <div class="sidebar">
+        <div class="list-group">
+            <h3>BRANDS</h3>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector brand searchType" value="OMEGA">OMEGA
+                        </label>
+                    </div>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector brand searchType" value="RADO">RADO
+                        </label>
+                    </div>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector brand searchType" value="SEIKO">SEIKO
+                        </label>
+                    </div>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector brand searchType" value="FOSSIL">FOSSIL
+                        </label>
+                    </div>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector brand searchType" value="CASIO">CASIO
+                        </label>
+                    </div>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector brand searchType" value="FOSSIL">FOSSIL
+                        </label>
+                    </div>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector brand searchType" value="TIMEX">TIMEX
+                        </label>
+                    </div>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector brand searchType" value="SONATA">SONATA
+                    </div>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector brand searchType" value="G-SHOCK">G-SHOCK
+                        </label>
+                    </div>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector brand searchType" value="TITAN">TITAN
+                        </label>
+                    </div>
+                </div>
+    
+
+    
+                <!-- Price Range List Group -->
+                <div class="list-group">
+                    <h3>PRICE RANGE</h3>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector price searchType" value="1000-10000"> Rs.1000 - Rs.10000
+                        </label>
+                    </div>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector price searchType" value="10000-25000"> Rs.10000 - Rs.25000
+                        </label>
+                    </div>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector price searchType" value="25000-35000"> Rs.25000 - Rs.35000
+                        </label>
+                    </div>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector price searchType" value="35000-50000"> Rs.35000 - Rs.50000
+                        </label>
+                    </div>
+                </div>
+            </div>
+    
+  <div class="productt">
+    <div class="produc">
+        <div class="produc-image">
+            <img src="/images/Screenshot 2025-02-01 at 6.53 Background Removed.24 PM.png" alt="tissot Black">
+            <div class="produc-buttons">
+                <button onclick="addToCart(this)" class="cart-btn" data-product-id="19" data-product-name="Tissot Men Black Analogue Watch" data-product-price="30599">
+                    <img src="/images/c.png"style="width: 75%;"> 
+                </button>
+                <button type="button" class="search-btn">
+                   <a href="product-19.html"><img src="/images/s.png" style="width: 75%;"></a>
+                </button>
+            </div>
+        </div>
+        <h3>Tissot Men Black Analogue Watch</h3>
+        <div class="produc-brand">TITAN</div>
+        <div class="produc-price">Rs. 30,599<span class="discoun">Rs. 42,000</span></div>
+    </div>
+    <div class="produc">
+        <div class="produc-image">
+            <img src="/images/SNE583P1.png" alt="GREEN seiko 5">
+            <div class="produc-buttons">
+                <button onclick="addToCart(this)" class="cart-btn" data-product-id="20" data-product-name="SEIKO 5 Boutique Green Stainless Steel" data-product-price="28613">
+                    <img src="/images/c.png"style="width: 75%;"> 
+                </button>
+                <button type="button" class="search-btn">
+                    <a href="product-20.html"><img src="/images/s.png" style="width: 75%;"></a>
+                 </button>
+            </div>
+        </div>
+        <h3>SEIKO 5 Boutique Green Stainless Steel</h3>
+        <div class="produc-brand">SEIKO</div>
+        <div class="produc-price">Rs. 28,613</div>
+    </div>
+    <div class="produc">
+        <div class="produc-image">
+            <img src="/images/SRPD53K1.png" alt="AMERICA SEIKO">
+            <div class="produc-buttons">
+                <button onclick="addToCart(this)" class="cart-btn" data-product-id="21" data-product-name="SEIKO SRPD53K1 American Tribe " data-product-price="18500">
+                    <img src="/images/c.png"style="width: 75%;"> 
+                </button>
+                <button type="button" class="search-btn">
+                   <a href="product-21.html"><img src="/images/s.png" style="width: 75%;"></a>
+                </button>
+            </div>
+        </div>
+        <h3>SEIKO SRPD53K1 American Tribe</h3>
+        <div class="produc-brand">SEIKO</div>
+        <div class="produc-price">Rs. 18,500</div>
+    </div>
+</div>
+
+</div>
+</section>
+<section id="pagination" class="section-p1">
+    <div class="pagination-container">
+        <a href="products2.html"><button id="prev-button" class="pagination-button" >&lt;</button></a>
+        <div id="pagination-numbers"></div>
+        <button id="next-button" class="pagination-button" >-</button></a>
+    </div>
+</section>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all filter checkboxes and products
+    const brandFilters = document.querySelectorAll('.brand');
+    const priceFilters = document.querySelectorAll('.price');
+    const products = document.querySelectorAll('.produc');
+
+    // Add event listeners to all checkboxes
+    brandFilters.forEach(filter => {
+        filter.addEventListener('change', filterProducts);
+    });
+
+    priceFilters.forEach(filter => {
+        filter.addEventListener('change', filterProducts);
+    });
+
+    function filterProducts() {
+        // Get selected brands and prices
+        const selectedBrands = Array.from(document.querySelectorAll('.brand:checked')).map(input => input.value);
+        const selectedPrices = Array.from(document.querySelectorAll('.price:checked')).map(input => input.value);
+
+        // Loop through each product
+        products.forEach(product => {
+            const brand = product.querySelector('.produc-brand').textContent;
+            const priceElement = product.querySelector('.produc-price');
+            
+            // Extract the actual price considering discounts
+            let price;
+            const discountElement = priceElement.querySelector('.discoun');
+            
+            if (discountElement) {
+                // If there's a discount, use the non-discounted price
+                price = parseInt(priceElement.textContent.split('Rs.')[1].replace(/[^0-9]/g, ''));
+            } else {
+                // If no discount, use the regular price
+                price = parseInt(priceElement.textContent.replace(/[^0-9]/g, ''));
+            }
+
+            // Check if product matches selected filters
+            const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(brand);
+            const matchesPrice = selectedPrices.length === 0 || selectedPrices.some(range => {
+                const [min, max] = range.split('-').map(num => parseInt(num));
+                return price >= min && price <= max;
+            });
+
+            // Show or hide product based on filters
+            if (matchesBrand && matchesPrice) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+
+        // Update result count
+        const visibleProducts = document.querySelectorAll('.produc[style="display: block"]').length;
+        const resultSpan = document.querySelector('.results');
+        if (resultSpan) {
+            resultSpan.textContent = `Showing ${visibleProducts} results`;
+        }
+    }
+
+    // Add sorting functionality
+    const sortSelect = document.getElementById('sort-select');
+    if (sortSelect) {
+        sortSelect.addEventListener('change', function() {
+            const productsArray = Array.from(products);
+            const container = document.querySelector('.productt');
+
+            productsArray.sort((a, b) => {
+                const getPriceValue = (element) => {
+                    const priceElement = element.querySelector('.produc-price');
+                    const discountElement = priceElement.querySelector('.discoun');
+                    if (discountElement) {
+                        return parseInt(priceElement.textContent.split('Rs.')[1].replace(/[^0-9]/g, ''));
+                    }
+                    return parseInt(priceElement.textContent.replace(/[^0-9]/g, ''));
+                };
+
+                const priceA = getPriceValue(a);
+                const priceB = getPriceValue(b);
+                
+                return this.value === 'price-high-to-low' ? priceB - priceA : priceA - priceB;
+            });
+
+            productsArray.forEach(product => container.appendChild(product));
+        });
+    }
+});
+</script>
+
+  <footer class="footer">
+    <div class="columns">
+        <div class="footer-column">
+            <h3>Urban Watches</h3>
+            <p>Your Time , Your Style and Your Watch.</p>
+            <p><b>Location:</b>  Kamalpokhari,Kathmandu,Bagmati Nepal</p>
+            <p><b>Email:<a href="mailto:yoururbanwatches@gmail.com?"></b> yoururbanwatches@gmail.com</p></a>
+            <p><b>Phone:</b> 9806066848 || 9867063203</p>
+            
+            
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                  <img src="/images/Untitled design.png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+              </a>
+              
+              <a href="https://www.instagram.com/urban_watchess?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <img src="/images/Untitled design (1).png" alt="Facebook Icon" style="width: 50px; height: 50px;">
+            </a>
+            </div>
+            
+          
+
+        </div>
+       
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="/base.html">Home</a>
+            <a href="/html/products.html">Shop</a>
+            <a href="/html/aboutus.html">About Us</a>
+            <a href="/html/contactus.html">Contact Us</a>
+        </div>
+        <div class="footer-column">
+            <h3>Company</h3>
+            <a href="/html/products.html">SALE!</a>
+            <a href="/html/products.html">Browse Watches</a>
+            <a href="/html/blog.html">Browse Testimonials</a>
+            <a href="/html/products.html">Browse Brands</a>
+        </div>
+       
+    </div>
+    
+    <div class="footer-bottom">
+        Urban Watches | All Rights Reserved 2025
+    </div>
+</footer>
+    
+</html>
