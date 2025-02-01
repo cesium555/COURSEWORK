@@ -32,9 +32,6 @@
             </div>
         </header>
         <body>
-  <section id="page-header">
-    <p style ="color:gold"><b> <a href="base.html" style="text-decoration: none; color: gold;">Home</a> > Shop</b></p>
-  </section>
     <style>
         /* General Styles */
         body {
@@ -460,7 +457,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         /* Construct the mailto URL */
         const mailtoLink = `mailto:yoururbanwatches@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-            `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            `Name: ${name}\n\nMessage:\n${message}`)}`;
 
         /* Open the mail client */
         window.location.href = mailtoLink;
