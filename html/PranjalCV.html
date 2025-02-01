@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">PRANJAL</div>
+            <div class="nav-links">
+                <a href="#about">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <button id="theme-toggle">
+                    ☀️/🌙
+                </button>
+            </div>
+            <button class="menu-btn">
+                
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <div class="hero-photo">
+                <img src="images/pranjal1.jpg" alt="Your Profile Photo" class="profile-photo">
+            </div>
+            <h1>Hi, I'm Pranjal..</h1>
+            <p>Chasing God.</p>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" class="social-icon">
+                    <img src="images/icons8-github-50.png" alt="GitHub" width="30">
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" class="social-icon">
+                    <img src="images/icons8-linkedin-50.png" alt="LinkedIn" width="30">
+                </a>
+                <a href="mailto:your-email@example.com" class="social-icon">
+                    <img src="images/icons8-email-50.png" alt="Email" width="30">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Urban Watches</h3>
+                <p>A full-stack web application built with React and Node.js</p>
+                <div class="project-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">MongoDB</span>
+                </div>
+                
+            </div>
+            <div class="project-card">
+                <h3>AI-Powered Resume Analyzer</h3>
+                <p> A tool that scans resumes and provides feedback based on job descriptions.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Django</span>
+                    <span class="tag">PyTorch</span>
+                </div>
+                
+            </div>
+            <div class="project-card">
+                <h3>Weather App with AI Insight</h3>
+                <p> A weather app that also provides AI-generated tips based on the forecast.</p>
+                <div class="project-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Stripe</span>
+                    <span class="tag">Firebase</span>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-grid">
+            <div class="education-card">
+                <h3>Bachelors of Computing with AI</h3>
+                <p class="education-year">2024-2027</p>
+                <p>Islington College</p>
+                <p>Specialized in Artificial Intelligence and Machine Learning</p>
+            </div>
+            <div class="education-card">
+                <h3>NEB +2 Science</h3>
+                <p class="education-year">2020-2022</p>
+                <p>Kanchanjuna Namuna College</p>
+                <p>NEB</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">SQL</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p>I'm currently open for new opportunities. Feel free to reach out!</p>
+        <a href="mailto:your.email@example.com" class="contact-btn">Send Message</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© Pranjal Acharya. All rights reserved.</p>
+    </footer>
+    <style>
+        /* Note: Conversions are based on a standard 16px root font size */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #3b82f6;
+    --text-color: #1f2937;
+    --bg-color: #ffffff;
+    --bg-secondary: #f9fafb;
+    --text-secondary: #4b5563;
+}
+
+.dark-mode {
+    --primary-color: #60a5fa;
+    --text-color: #f9fafb;
+    --bg-color: #111827;
+    --bg-secondary: #1f2937;
+    --text-secondary: #9ca3af;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--bg-color);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 19px;
+}
+
+/* Hero Section */
+.hero-photo {
+    position: relative;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 
+        0 10px 25px rgba(0,0,0,0.1), 
+        0 6px 10px rgba(0,0,0,0.05);
+    transition: 
+        transform 0.3s ease, 
+        box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 15px 35px rgba(0,0,0,0.15), 
+        0 8px 15px rgba(0,0,0,0.1);
+}
+.hero {
+    padding: 128px 16px 64px;
+    text-align: center;
+    background: var(--bg-color);
+    animation: fadeIn 1s ease-in;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    color: var(--text-secondary);
+    font-size: 20px;
+    margin-bottom: 32px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Projects Section */
+.projects {
+    padding: 64px 16px;
+    background: var(--bg-secondary);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 48px;
+}
+
+.projects-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    padding: 0 16px;
+}
+
+.project-card {
+    background: var(--bg-color);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.tag {
+    background: var(--bg-secondary);
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+}
+
+/* Education Section */
+.education {
+    padding: 64px 16px;
+    background: var(--bg-color);
+}
+
+.education-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.education-card {
+    background: var(--bg-secondary);
+    padding: 24px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.education-card:hover {
+    transform: translateX(-10px);
+}
+
+.education-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.education-year {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Skills Section */
+.skills {
+    padding: 64px 16px;
+    background: var(--bg-secondary);
+}
+
+.skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.skill-tag {
+    background: var(--bg-color);
+    padding: 8px 16px;
+    border-radius: 16px;
+    transition: transform 0.3s;
+}
+
+.skill-tag:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact {
+    padding: 64px 16px;
+    text-align: center;
+    background: var(--bg-color);
+}
+
+.contact p {
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    background: var(--primary-color);
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    padding: 32px;
+    text-align: center;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-color);
+        padding: 16px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+    </style>
+
+    <script>
+        // Dark Mode Toggle
+        // Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+});
+
+// Mobile Menu Toggle
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
