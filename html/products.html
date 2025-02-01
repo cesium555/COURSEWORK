@@ -81,7 +81,12 @@
                     </div>
                     <div class="list-group-item">
                         <label>
-                            <input type="checkbox" class="common-selector brand searchType" value="TISSOT">TISSOT
+                            <input type="checkbox" class="common-selector brand searchType" value="SEIKO">SEIKO
+                        </label>
+                    </div>
+                    <div class="list-group-item">
+                        <label>
+                            <input type="checkbox" class="common-selector brand searchType" value="FOSSIL">FOSSIL
                         </label>
                     </div>
                     <div class="list-group-item">
@@ -110,7 +115,7 @@
                     </div>
                     <div class="list-group-item">
                         <label>
-                            <input type="checkbox" class="common-selector brand searchType" value="Q&Q">Q&Q
+                            <input type="checkbox" class="common-selector brand searchType" value="TITAN">TITAN
                         </label>
                     </div>
                 </div>
@@ -274,9 +279,9 @@
     </div>
     <div class="produc">
         <div class="produc-image">
-            <img src="/images/517AIIesGqL._SS400_.jpg" alt="Tissot Watch">
+            <img src="/images/617PuITXFNL._SS1000_.jpg" alt="Tissot Watch">
             <div class="produc-buttons">
-                <button onclick="addToCart(this)" class="cart-btn" data-product-id="7" data-product-name="Transcend Stainless Steel Mesh Band Watch" data-product-price="21955">
+                <button onclick="addToCart(this)" class="cart-btn" data-product-id="9" data-product-name="FOSSIL Stainless Nate Jr1404" data-product-price="255000">
                     <img src="/images/c.png"style="width: 75%;"> 
                 </button>
                 <button type="button" class="search-btn">
@@ -284,9 +289,9 @@
                 </button>
             </div>
         </div>
-        <h3>Q&Q LIMITED JOSH SERIES</h3>
-        <div class="produc-brand">Q&Q</div>
-        <div class="produc-price">Rs. 42,000</div>
+        <h3>FOSSIL Stainless Nate Jr1404 </h3>
+        <div class="produc-brand">FOSSIL</div>
+        <div class="produc-price">Rs. 25,000</div>
     </div>
 </div>
 
@@ -299,76 +304,103 @@
         <a href="products2.html"><button id="next-button" class="pagination-button" >&gt;</button></a>
     </div>
 </section>
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>Coming Soon!</h2>
+        <p>The checkout feature will be available soon.</p>
+    </div>
+</div>
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get all filter checkboxes and products
-        const brandFilters = document.querySelectorAll('.brand');
-        const priceFilters = document.querySelectorAll('.price');
-        const products = document.querySelectorAll('.produc');
-    
-        // Add event listeners to all checkboxes
-        brandFilters.forEach(filter => {
-            filter.addEventListener('change', filterProducts);
-        });
-    
-        priceFilters.forEach(filter => {
-            filter.addEventListener('change', filterProducts);
-        });
-    
-        function filterProducts() {
-            // Get selected brands and prices
-            const selectedBrands = Array.from(document.querySelectorAll('.brand:checked')).map(input => input.value);
-            const selectedPrices = Array.from(document.querySelectorAll('.price:checked')).map(input => input.value);
-    
-            // Loop through each product
-            products.forEach(product => {
-                const brand = product.querySelector('.produc-brand').textContent;
-                const priceText = product.querySelector('.produc-price').textContent;
-                const price = parseInt(priceText.replace(/[^0-9]/g, '')); // Extracts number from "Rs. 12,115"
-    
-                // Check if product matches selected filters
-                const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(brand);
-                const matchesPrice = selectedPrices.length === 0 || selectedPrices.some(range => {
-                    const [min, max] = range.split('-').map(num => parseInt(num));
-                    return price >= min && price <= max;
-                });
-    
-                // Show or hide product based on filters
-                if (matchesBrand && matchesPrice) {
-                    product.style.display = 'block';
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-    
-            // Update result count
-            const visibleProducts = document.querySelectorAll('.produc[style="display: block"]').length;
-            const resultSpan = document.querySelector('.results .highlight');
-            if (resultSpan) {
-                resultSpan.textContent = visibleProducts;
-            }
-        }
-    
-        // Add sorting functionality
-        const sortSelect = document.getElementById('sort-select');
-        if (sortSelect) {
-            sortSelect.addEventListener('change', function() {
-                const productsArray = Array.from(products);
-                const container = document.querySelector('.productt');
-    
-                productsArray.sort((a, b) => {
-                    const priceA = parseInt(a.querySelector('.produc-price').textContent.replace(/[^0-9]/g, ''));
-                    const priceB = parseInt(b.querySelector('.produc-price').textContent.replace(/[^0-9]/g, ''));
-                    
-                    return this.value === 'price-high-to-low' ? priceB - priceA : priceA - priceB;
-                });
-    
-                productsArray.forEach(product => container.appendChild(product));
-            });
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all filter checkboxes and products
+    const brandFilters = document.querySelectorAll('.brand');
+    const priceFilters = document.querySelectorAll('.price');
+    const products = document.querySelectorAll('.produc');
+
+    // Add event listeners to all checkboxes
+    brandFilters.forEach(filter => {
+        filter.addEventListener('change', filterProducts);
     });
-    </script>
+
+    priceFilters.forEach(filter => {
+        filter.addEventListener('change', filterProducts);
+    });
+
+    function filterProducts() {
+        // Get selected brands and prices
+        const selectedBrands = Array.from(document.querySelectorAll('.brand:checked')).map(input => input.value);
+        const selectedPrices = Array.from(document.querySelectorAll('.price:checked')).map(input => input.value);
+
+        // Loop through each product
+        products.forEach(product => {
+            const brand = product.querySelector('.produc-brand').textContent;
+            const priceElement = product.querySelector('.produc-price');
+            
+            // Extract the actual price considering discounts
+            let price;
+            const discountElement = priceElement.querySelector('.discoun');
+            
+            if (discountElement) {
+                // If there's a discount, use the non-discounted price
+                price = parseInt(priceElement.textContent.split('Rs.')[1].replace(/[^0-9]/g, ''));
+            } else {
+                // If no discount, use the regular price
+                price = parseInt(priceElement.textContent.replace(/[^0-9]/g, ''));
+            }
+
+            // Check if product matches selected filters
+            const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(brand);
+            const matchesPrice = selectedPrices.length === 0 || selectedPrices.some(range => {
+                const [min, max] = range.split('-').map(num => parseInt(num));
+                return price >= min && price <= max;
+            });
+
+            // Show or hide product based on filters
+            if (matchesBrand && matchesPrice) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+
+        // Update result count
+        const visibleProducts = document.querySelectorAll('.produc[style="display: block"]').length;
+        const resultSpan = document.querySelector('.results');
+        if (resultSpan) {
+            resultSpan.textContent = `Showing ${visibleProducts} results`;
+        }
+    }
+
+    // Add sorting functionality
+    const sortSelect = document.getElementById('sort-select');
+    if (sortSelect) {
+        sortSelect.addEventListener('change', function() {
+            const productsArray = Array.from(products);
+            const container = document.querySelector('.productt');
+
+            productsArray.sort((a, b) => {
+                const getPriceValue = (element) => {
+                    const priceElement = element.querySelector('.produc-price');
+                    const discountElement = priceElement.querySelector('.discoun');
+                    if (discountElement) {
+                        return parseInt(priceElement.textContent.split('Rs.')[1].replace(/[^0-9]/g, ''));
+                    }
+                    return parseInt(priceElement.textContent.replace(/[^0-9]/g, ''));
+                };
+
+                const priceA = getPriceValue(a);
+                const priceB = getPriceValue(b);
+                
+                return this.value === 'price-high-to-low' ? priceB - priceA : priceA - priceB;
+            });
+
+            productsArray.forEach(product => container.appendChild(product));
+        });
+    }
+});
+</script>
 
   <footer class="footer">
     <div class="columns">
