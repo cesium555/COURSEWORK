@@ -11,6 +11,39 @@ const cartManager = {
         // Initialize product page specific elements
         this.initProductPage();
         this.initProductListPage();
+        this.initCartPanel();
+    },
+
+    initCartPanel() {
+        // Create popup HTML if it doesn't exist
+        if (!document.getElementById('popup')) {
+            const popupHTML = `
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close-popup">&times;</span>
+                        <h2>Coming Soon!</h2>
+                        <p>The checkout feature will be available soon.</p>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', popupHTML);
+        }
+
+        // Add event listeners for popup
+        const popup = document.getElementById('popup');
+        const closePopupBtn = popup.querySelector('.close-popup');
+
+        // Close popup when clicking the X button
+        closePopupBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        // Close popup when clicking outside
+        window.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
     },
     
     initProductPage() {
@@ -125,6 +158,17 @@ const cartManager = {
         document.querySelectorAll('.subtotal-amount').forEach(element => {
             element.textContent = `Rs. ${subtotal.toLocaleString()}`;
         });
+
+        // Add checkout button event listener
+        const checkoutButton = document.querySelector('.go-to-checkout');
+        if (checkoutButton) {
+            // Remove existing listener to prevent duplicates
+            checkoutButton.replaceWith(checkoutButton.cloneNode(true));
+            // Add new listener
+            document.querySelector('.go-to-checkout').addEventListener('click', () => {
+                document.getElementById('popup').style.display = 'block';
+            });
+        }
     },
     
     toggleCart() {
@@ -140,23 +184,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Export toggleCart for global usage
 window.toggleCart = () => cartManager.toggleCart();
-
-//minimum order should be 1
-function validatePurchase() {
-    const quantity = parseInt(document.getElementById('quantity').value);
-    
-    if (quantity <= 0) {
-        alert('Please select at least 1 item to purchase!');
-        return false;
-    } else {
-        // Here you can add code to handle the purchase
-        alert('Proceeding to purchase ' + quantity + ' item(s)');
-        return true;
-    }
-}
-    // Prevent negative numbers and non-numeric input
-    quantityInput.addEventListener('input', function() {
-        if (this.value < 0 || this.value === '') {
-            this.value = 1;
-        }
-    });
